@@ -1,3 +1,2 @@
 # kamojic
-Project about beauty salon
-Link: https://thebash1.github.io/kamojic/
+Project about beauty salon https://thebash1.github.io/kamojic/
