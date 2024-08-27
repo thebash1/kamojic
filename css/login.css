@@ -37,9 +37,7 @@
     transform: translateY(10dvh);
 }
 
-@media screen and (max-width: 350px){
-    
-}
+
 
 @media screen and (max-width: 450px){
     .container{
