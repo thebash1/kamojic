@@ -8,20 +8,22 @@
     <link rel="shortcut icon" href="../../icons/user-plus-regular-24.png" type="image/x-icon">
 </head>
 <body>
-    <section class="main">
-        <h1 class="text-center">Agendar cita</h1>
-
-        <div class="form-control">
-            <form>
-                <label for="first_name">Nombre:</label><br>
-                <input type="text" id="first_name" name="first_name"><br>
-                <label for="last_name">Apellido:</label><br>
-                <input type="text" id="last_name" name="last_name">
-            </form>
-        </div>
+    <section class="container">
+       <h1 class="h1">Agendar cita</h1>
+       <form action="" class="form">
+            <div class="input-box">
+                <label for="fname">Nombre:</label>
+                <input type="text">
+            </div>
+            <div class="input-box">
+                <label for="lname">Apellido:</label>
+                <input type="text">
+            </div>
+       </form>
+       <button type="button" id="toggleButton"><img src="../../icons/moon-regular-24.png" alt="" srcset=""></button>
     </section>
 
-    
+    <script src="script.js"></script>
 </body>
 </html>
 

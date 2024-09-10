@@ -1,32 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
-    font-family: 'Poppins', sans-serif;
-    color: black;
-}
-
-.main{
-    display: grid;
-    padding-top: 1em;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-
-.text-center {
-    margin-top: 0;
-    font-weight: 400;
-    font-size: 4dvh;
-    text-align: center;
+body {
+    background-color: #fff;
+    color: #000;
+    transition: 1s ease;
 }
 
-
-.form-control{
+.container{
+    width: 100%;
     display: grid;
-    grid-column: 1;
-    grid-row: 2;
-    font-size: medium;
-    font-size: 2dvh;
+    grid-template-columns: repeat(12, minmax(100px,1fr));
+    grid-template-rows: repeat(6, minmax(50px, 1fr));
 }
 
-.radio-btn{
+body.dark-mode {
+    transition: 1s ease;
+    background-color: #2c2c2c;
+    color: #fff;
+}
 
+img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    border: none;
+}
+
+button {
+    display: grid;
+    place-items: center;
+    grid-column: 12;
+    grid-row: -6;
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.form {
+    max-width: 500px;
+    width: 500px;
+    columns: 200px;
+    place-content: center;
+    grid-column-start: 5;
+    grid-row: 2;
+}
+
+.h1 {
+    grid-column: 6;
+    width: 300px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.input-box {
+    place-content: center;
 }
