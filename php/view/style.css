@@ -7,16 +7,17 @@
 }
 
 body {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(100px, 1fr));
+    grid-template-rows: repeat(5, minmax(100px, 1fr));
     background-color: #fff;
     color: #000;
     transition: 1s ease;
 }
 
 .container{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(12, minmax(100px,1fr));
-    grid-template-rows: repeat(6, minmax(50px, 1fr));
+    grid-column: 1/13;
+    grid-row: 1/6;
 }
 
 body.dark-mode {
@@ -25,45 +26,32 @@ body.dark-mode {
     color: #fff;
 }
 
-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    object-fit: cover;
-    border: none;
-}
-
-button {
-    display: grid;
-    place-items: center;
-    grid-column: 12;
-    grid-row: -6;
-    width: 50px;
-    height: 50px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: white;
-}
-
-.form {
-    max-width: 500px;
-    width: 500px;
-    columns: 200px;
-    place-content: center;
-    grid-column-start: 5;
-    grid-row: 2;
-}
-
-.h1 {
-    grid-column: 6;
-    width: 300px;
-    text-align: center;
+.h1{
+    grid-column: 6/12;
     font-size: 40px;
     font-weight: 500;
+    text-align: center;
 }
 
-.input-box {
+.form{
+    grid-column: 6;
+    height: auto;
     place-content: center;
+    grid-row: span 2;
+    
+}
+
+input{
+    font-size: 18px;
+}
+
+.input-box{
+    grid-row: 3;
+    margin-top: 20px;
+
+}
+
+button{
+    grid-column: 6;
+    grid-row: 5;
 }
