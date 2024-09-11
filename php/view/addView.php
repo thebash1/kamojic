@@ -4,27 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Añadir</title>
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="../../icons/user-plus-regular-24.png" type="image/x-icon">
     
 </head>
 <body>
-    <section class="container">
+    <div class="container">
+        <div class="container-center">
+            <h1>Agendar cita</h1>
+            <form action="" class="form">
+                <label for="fname">Nombre:</label>
+                <input type="text" name="fname" id="fname"><br>
+                <label for="lname">Apellido:</label>
+                <input type="text" name="lname" id="lname"><br>
+                <label for="phone">Teléfono:</label>
+                <input type="number" name="phone" id="phone"><br>
+            </form>
 
-        <h1 class="h1">Agendar cita</h1>
-    
-        <form action="" class="form">
-                <div class="input-box">
-                    <label for="fname">Nombre:</label>
-                    <input type="text">
-                </div>
-                <div class="input-box">
-                    <label for="lname">Apellido:</label>
-                    <input type="text">
-                </div>
-        </form>
-       <button type="button" id="toggleButton"><img src="../../icons/moon-regular-24.png" alt="" srcset=""></button>
-    </section>
+            <div class="btn-group">
+                <button class="btn-cancel" type="button">Cancelar</button>
+                <button class="btn-save" type="button">Guardar</button>
+            </div>
+        </div>
+    </div>
+
 
     <script src="script.js"></script>
 </body>

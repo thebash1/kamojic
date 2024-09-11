@@ -7,17 +7,9 @@
 }
 
 body {
-    display: grid;
-    grid-template-columns: repeat(12, minmax(100px, 1fr));
-    grid-template-rows: repeat(5, minmax(100px, 1fr));
     background-color: #fff;
     color: #000;
     transition: 1s ease;
-}
-
-.container{
-    grid-column: 1/13;
-    grid-row: 1/6;
 }
 
 body.dark-mode {
@@ -26,32 +18,90 @@ body.dark-mode {
     color: #fff;
 }
 
-.h1{
-    grid-column: 6/12;
-    font-size: 40px;
+.container{
+    display: grid;
+    grid-template-columns: repeat(12, minmax(100px, 1fr));
+    grid-template-rows: repeat(8, minmax(80px, 1fr));
+    box-sizing: border-box;
+}
+
+.container-center {
+    display: inherit;
+    grid-column: 2/12;
+    grid-row: 1/4;
+}
+
+h1{
+    height: auto;
+    font-size: 50px;
     font-weight: 500;
     text-align: center;
+    place-content: center;
 }
 
 .form{
-    grid-column: 6;
-    height: auto;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
     place-content: center;
-    grid-row: span 2;
-    
+    width: auto;
 }
 
 input{
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-bottom: 1px solid;
 }
 
-.input-box{
-    grid-row: 3;
-    margin-top: 20px;
 
+.btn-group{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-self: center;
+    place-content: space-evenly;
+    width: 250px;
+    height: 50px;
+    border: none;
 }
 
-button{
-    grid-column: 6;
-    grid-row: 5;
+.btn-cancel{
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: 100px;
+    color: #000;
+    background-color: white;
+    transition: background-color 0.8s;
 }
+
+.btn-cancel:hover {
+    background-color: lightcoral;
+}
+
+.btn-save{
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: 100px;
+    color: #000;
+    background-color: white;
+    transition: background-color 0.8s;
+}
+
+.btn-save:hover{
+    background-color: lightskyblue;
+}
+
+
+
+
+
