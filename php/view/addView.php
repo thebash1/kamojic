@@ -11,7 +11,15 @@
 <body>
     <div class="container">
         <div class="container-center">
-            <h1>Agendar cita</h1>
+            <nav class="navbar">
+                <h1>Agendar cita</h1>
+                <ul class="items">
+                    <li><a href="./deleteView.php">Borrar cita</a></li>
+                    <li><a href="./updateView.php">Modificar cita</a></li>
+                    <li><a href="./searchView.php">Buscar cita</a></li>
+                    <li class="logout"><a href="../../index.html">Cerrar sesión</a></li>
+                </ul>
+            </nav>
             <form action="" class="form">
                 <label for="fname">Nombre:</label>
                 <input type="text" name="fname" id="fname"><br>
