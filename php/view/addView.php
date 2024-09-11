@@ -25,6 +25,11 @@
                 <button class="btn-cancel" type="button">Cancelar</button>
                 <button class="btn-save" type="button">Guardar</button>
             </div>
+
+            <div class="mode">
+                <button class="btn-mode" type="button" id="toggleButton"><img src="../../icons/moon-regular-24.png" alt=""></button>
+            </div>
+
         </div>
     </div>
 
