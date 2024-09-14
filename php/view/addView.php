@@ -41,10 +41,8 @@
         </div>
     </div>
 
-
+    <?php echo "prueba" ?>
     <script src="script.js"></script>
 </body>
 </html>
-
-<?php
 
