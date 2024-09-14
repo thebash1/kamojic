@@ -11,8 +11,8 @@
 <body>
     <div class="container">
         <div class="container-center">
+            <h1>Agendar citas</h1>
             <nav class="navbar">
-                <h1>Agendar cita</h1>
                 <ul class="items">
                     <li><a href="./deleteView.php">Borrar cita</a></li>
                     <li><a href="./updateView.php">Modificar cita</a></li>
@@ -41,8 +41,12 @@
         </div>
     </div>
 
-    <?php echo "prueba" ?>
     <script src="script.js"></script>
 </body>
 </html>
+
+<?php
+    
+
+?>
 
