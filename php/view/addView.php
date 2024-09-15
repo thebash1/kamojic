@@ -34,9 +34,9 @@
                 <button class="btn-save" type="button">Guardar</button>
             </div>
 
-            <div class="mode">
+            <!-- <div class="mode">
                 <button class="btn-mode" type="button" id="toggleButton"><img src="../../icons/moon-regular-24.png" alt=""></button>
-            </div>
+            </div> -->
 
         </div>
     </div>
