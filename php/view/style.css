@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@ body{
     color: #000;
     transition: 1s ease;
 }
-
+/*
 body.dark-mode{
     color: white;
     background-color: #2c2c2c;
@@ -135,6 +135,11 @@ h1{
     text-align: center;
     margin-bottom: 20px;
 }
+*/
+
+ol, ul {
+    padding-left: 0;
+}
 
 ul{
     height: auto;
@@ -143,10 +148,8 @@ ul{
     list-style-type: none;
     display: inherit;
     gap: 20px;
-    place-content: center;
-    align-self: center;
-    justify-items: center;
     cursor: pointer;
+    
 }
 
 a{
@@ -160,7 +163,7 @@ a::before{
     position: absolute;
     width: 100%;
     height: 2px;
-    // border-radius: 50px; 
+    /*border-radius: 50px;*/ 
     background-color: lightcoral;
     bottom: 0;
     left: 0;
@@ -174,6 +177,9 @@ transform-origin: left;
 transform: scaleX(1);
 }
 
+
+
+/*
 @media (max-width: 800px){
     .container-center{
         display: grid;
