@@ -26,7 +26,7 @@
                 <label for="lname">Apellido:</label>
                 <input type="text" name="lname" id="lname"><br>
                 <label for="phone">Teléfono:</label>
-                <input type="number" name="phone" id="phone"><br>
+                <input type="text" name="phone" id="phone"><br>
             </form>
 
             <div class="btn-group">
