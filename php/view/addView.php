@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
             <h1 class="text-center my-3">Agendar citas</h1>
             <nav class="navbar mb-3">
                 <ul class="nav justify-content-center">
@@ -21,7 +21,7 @@
                     <li class="nav-item"><a class="nav-link text-body" id="logout" name="logout" href="../../index.html">Cerrar sesión</a></li>
                 </ul>
             </nav>
-            <div class="row justify-content-center">
+            <div class="row">
                 <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
                     <input type="text" class="form-control" placeholder="Nombres" aria-label="Nombres" required>
                 </div>
@@ -29,7 +29,7 @@
                     <input type="text" class="form-control" placeholder="Apellidos" aria-label="Apellidos" required>
                 </div>
             </div>
-            <div class="row my-2 justify-content-center">
+            <div class="row my-2">
                 <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
                     <input type="text" class="form-control" placeholder="Teléfono" aria-label="Teléfono" name="" id="" required>
                 </div>
@@ -43,7 +43,7 @@
                 </div>
             </div>
 
-            <div class="row justify-content-center">
+            <div class="row">
                 <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
                     <input type="text" class="form-control" placeholder="Servicio elegido" aria-label="Servicio" name="" id="" required>
                 </div>
@@ -52,7 +52,7 @@
                 </div>
             </div>
 
-            <div class="row my-2 justify-content-center">
+            <div class="row my-2">
                 <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
                     <input type="text" class="form-control" placeholder="Fecha registrada" aria-label="Fecha" disabled>
                 </div>
@@ -61,7 +61,7 @@
                 </div>
             </div>
             
-            <div class="row my-2 justify-content-center ">
+            <div class="row my-2 justify-content-center">
                 <div class="d-grid gap-2 col-7 col-md-6 col-lg-4">
                     <button type="button" class="btn btn-primary">Guardar</button>
                     <button type="button" class="btn btn-danger">Cancelar</button>
