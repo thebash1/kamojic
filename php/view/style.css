@@ -149,7 +149,6 @@ ul{
     display: inherit;
     gap: 20px;
     cursor: pointer;
-    
 }
 
 a{
@@ -178,6 +177,8 @@ transform: scaleX(1);
 }
 
 
+@media screen and (max-width:590px) {
+}
 
 /*
 @media (max-width: 800px){
