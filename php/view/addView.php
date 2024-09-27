@@ -21,7 +21,24 @@
                     <li class="nav-item"><a class="nav-link text-body" id="logout" name="logout" href="../../index.html">Cerrar sesión</a></li>
                 </ul>
             </nav>
-            <div class="row">
+
+            <!-- container search id user -->
+
+            <!-- <div class="row my-1 justify-content-center">
+                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
+                    <input class="form-control" type="text" placeholder="Usuario registrado" aria-label="Usuario" disabled>
+                </div>
+                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4"> 
+                    <form class="d-flex" role="search" action="">
+                        <input class="form-control me-2" type="search" placeholder="ID usuario" aria-label="ID usuario">
+                        <button class="btn btn-outline-info" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div> -->
+
+            <!-- end container search id user -->
+
+            <div class="row my-1 justify-content-center">
                 <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
                     <input type="text" class="form-control" placeholder="Nombres" aria-label="Nombres" required>
                 </div>
@@ -29,7 +46,7 @@
                     <input type="text" class="form-control" placeholder="Apellidos" aria-label="Apellidos" required>
                 </div>
             </div>
-            <div class="row my-2">
+            <div class="row my-1 justify-content-center">
                 <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
                     <input type="text" class="form-control" placeholder="Teléfono" aria-label="Teléfono" name="" id="" required>
                 </div>
@@ -43,7 +60,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row my-1 justify-content-center">
                 <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
                     <input type="text" class="form-control" placeholder="Servicio elegido" aria-label="Servicio" name="" id="" required>
                 </div>
@@ -52,7 +69,7 @@
                 </div>
             </div>
 
-            <div class="row my-2">
+            <div class="row my-1 justify-content-center">
                 <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
                     <input type="text" class="form-control" placeholder="Fecha registrada" aria-label="Fecha" disabled>
                 </div>
@@ -61,10 +78,10 @@
                 </div>
             </div>
             
-            <div class="row my-2 justify-content-center">
+            <div class="row my-3 justify-content-center">
                 <div class="d-grid gap-2 col-7 col-md-6 col-lg-4">
-                    <button type="button" class="btn btn-primary">Guardar</button>
-                    <button type="button" class="btn btn-danger">Cancelar</button>
+                    <button type="button" class="btn btn-outline-primary">Guardar</button>
+                    <button type="button" class="btn btn-outline-danger">Cancelar</button>
                 </div>
             </div>
             <!-- <div class="mode">
