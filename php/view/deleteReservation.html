@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="../../icons/user-plus-regular-24.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <h1 class="text-center my-3">Borrar citas</h1>
+            <nav class="navbar mb-3">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item"><a class="nav-link text-body" href="./addReservation.php">Agregar cita</a></li>
+                    <li class="nav-item"><a class="nav-link text-body" href="./updateReservation.php">Modificar cita</a></li>
+                    <li class="nav-item"><a class="nav-link text-body" href="./searchReservation.php">Buscar cita</a></li>
+                    <li class="nav-item"><a class="nav-link text-body" id="logout" name="logout" href="../../index.html">Cerrar sesión</a></li>
+                </ul>
+            </nav>
+
+<!-- #region container buscar usuario -->
+            <div class="row my-1 justify-content-center">
+                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
+                    <input class="form-control" type="text" placeholder="Fecha" aria-label="Fecha" id="date_delete_reservation" name="date_delete_reservation" value="" disabled>
+                </div>
+                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4"> 
+                    <form class="d-flex" role="search" action="">
+                        <input class="form-control me-2" type="search" placeholder="ID Usuario" aria-label="ID usuario">
+                        <button class="btn btn-info" type="button" title="Con la fecha actual">Buscar</button>
+                    </form>
+                </div>
+            </div>
+<!-- #endregion container buscar usuario-->
+
+<!-- #region lista de citas -->
+            <table class="table table-hover mt-5">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Usuario</th>
+                        <th scope="col">Nombre y apellido</th>
+                        <th scope="col">Teléfono</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>marto21</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>jabton39</td>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>larthe09</td>
+                        <td>Larry the Bird</td>
+                        <td>3012931912</td>
+                    </tr>
+                </tbody>
+            </table>
+<!-- #endregion lista de citas -->
+
+<!-- #region container agregar citas -->
+            <!-- <div class="row my-1 justify-content-center">
+                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
+                    <input type="text" class="form-control" placeholder="Nombres" aria-label="Nombres" required>
+                </div>
+                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
+                    <input type="text" class="form-control" placeholder="Apellidos" aria-label="Apellidos" required>
+                </div>
+            </div>
+            <div class="row my-1 justify-content-center">
+                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
+                    <input type="text" class="form-control" placeholder="Teléfono" aria-label="Teléfono" name="" id="" required>
+                </div>
+                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
+                    <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+                    <select class="form-select" id="autoSizingSelect" required>
+                        <option selected>Sexo</option>
+                        <option value="1">Masculino</option>
+                        <option value="2">Femenino</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row my-1 justify-content-center">
+                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
+                    <input type="text" class="form-control" placeholder="Servicio elegido" aria-label="Servicio" name="" id="" required>
+                </div>
+                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
+                    <input class="form-control" type="text" placeholder="Agendamiento presencial" aria-label="Agendamiento" disabled>
+                </div>
+            </div>
+
+            <div class="row my-1 justify-content-center">
+                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
+                    <input type="text" class="form-control" placeholder="Fecha registrada" aria-label="Fecha" disabled>
+                </div>
+                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
+                    <input type="text" class="form-control" placeholder="Cita pendiente" aria-label="Estado" disabled>
+                </div>
+            </div> -->
+<!-- #endregion container agregar citas -->
+ 
+        <!-- btn grupo
+            <div class="row my-3 justify-content-center">
+                <div class="d-grid gap-2 col-6 col-md-4 col-lg-3 col-xl-3">
+                    <button type="button" class="btn btn-outline-primary">Guardar</button> 
+                    <button type="button" class="btn btn-outline-danger">Cancelar</button>    
+                </div>
+            </div>
+        -->
+        
+            <!-- #region btn modo noche -->
+            <!-- <div class="mode">
+                <button class="btn-mode" type="button" id="toggleButton"><img src="../../icons/moon-regular-24.png" alt=""></button>
+            </div> -->
+            <!-- #endregion btn modo noche-->
+
+        </div>
+    </div>
+
+    <script src="../model/script.js"></script>
+</body>
+</html>
+
+
