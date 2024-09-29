@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Añadir</title>
+    <title>Actualizar</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="shortcut icon" href="../../icons/user-plus-regular-24.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../icons/user-detail-solid-24.png" type="image/x-icon">
     <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
 
 </head>
@@ -23,21 +23,21 @@
                 </ul>
             </nav>
 
-<!-- #region container buscar usuario -->
+<!-- #region container buscar cliente -->
             <div class="row my-1 justify-content-center">
-                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
+                <div class="col d-xs-block col-sm-4 col-md-3 col-lg-2 col-xl-2">
                     <input class="form-control" type="text" placeholder="Fecha" aria-label="Fecha" id="date_update_reservation" name="date_update_reservation" value="" disabled>
                 </div>
-                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4"> 
+                <div class="col d-xs-block col-sm-8 col-md-5 col-lg-3 col-xl-3"> 
                     <form class="d-flex" role="search" action="">
                         <input class="form-control me-2" type="search" placeholder="ID Cliente" aria-label="ID Cliente">
                         <button class="btn btn-info" type="button" title="Con fecha actual">Modificar</button>
                     </form>
                 </div>
             </div>
-<!-- #endregion container buscar usuario-->
+<!-- #endregion container buscar cliente -->
 
-<!-- #region lista de citas -->
+<!-- #region tabla clientes -->
             <table class="table table-hover mt-5">
                 <thead>
                     <tr>
@@ -72,64 +72,7 @@
                     </tr>
                 </tbody>
             </table>
-<!-- #endregion lista de citas -->
-
-<!-- #region container agregar citas -->
-            <!-- <div class="row my-1 justify-content-center">
-                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
-                    <input type="text" class="form-control" placeholder="Nombres" aria-label="Nombres" required>
-                </div>
-                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
-                    <input type="text" class="form-control" placeholder="Apellidos" aria-label="Apellidos" required>
-                </div>
-            </div>
-            <div class="row my-1 justify-content-center">
-                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
-                    <input type="text" class="form-control" placeholder="Teléfono" aria-label="Teléfono" name="" id="" required>
-                </div>
-                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
-                    <label class="visually-hidden" for="autoSizingSelect">Preference</label>
-                    <select class="form-select" id="autoSizingSelect" required>
-                        <option selected>Sexo</option>
-                        <option value="1">Masculino</option>
-                        <option value="2">Femenino</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="row my-1 justify-content-center">
-                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
-                    <input type="text" class="form-control" placeholder="Servicio elegido" aria-label="Servicio" name="" id="" required>
-                </div>
-                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
-                    <input class="form-control" type="text" placeholder="Agendamiento presencial" aria-label="Agendamiento" disabled>
-                </div>
-            </div>
-
-            <div class="row my-1 justify-content-center">
-                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
-                    <input type="text" class="form-control" placeholder="Fecha registrada" aria-label="Fecha" disabled>
-                </div>
-                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
-                    <input type="text" class="form-control" placeholder="Cita pendiente" aria-label="Estado" disabled>
-                </div>
-            </div> -->
-<!-- #endregion container agregar citas -->
- 
-        <!-- btn grupo
-            <div class="row my-3 justify-content-center">
-                <div class="d-grid gap-2 col-6 col-md-4 col-lg-3 col-xl-3">
-                    <button type="button" class="btn btn-outline-primary">Guardar</button> 
-                    <button type="button" class="btn btn-outline-danger">Cancelar</button>    
-                </div>
-            </div>
-        -->
-        
-            <!-- #region btn modo noche -->
-            <!-- <div class="mode">
-                <button class="btn-mode" type="button" id="toggleButton"><img src="../../icons/moon-regular-24.png" alt=""></button>
-            </div> -->
-            <!-- #endregion btn modo noche-->
+<!-- #endregion tabla clientes -->
 
         </div>
     </div>

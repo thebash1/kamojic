@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="../../icons/user-circle-regular-24.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <h1 class="text-center my-3">Buscar citas</h1>
+            <nav class="navbar mb-3">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item"><a class="nav-link text-body" href="./addReservation.html">Agregar cita</a></li>
+                    <li class="nav-item"><a class="nav-link text-body" href="./deleteReservation.html">Borrar cita</a></li>
+                    <li class="nav-item"><a class="nav-link text-body" href="./updateReservation.html">Actualizar cita</a></li>
+                    <li class="nav-item"><a class="nav-link text-body" id="logout" name="logout" href="../../index.html">Cerrar sesión</a></li>
+                </ul>
+            </nav>
+
+<!-- #region container buscar cliente -->
+            <div class="row my-1 justify-content-center">
+                <div class="col d-xs-block col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                    <input class="form-control" type="text" placeholder="Fecha" aria-label="Fecha" id="date_delete_reservation" name="date_delete_reservation" value="" disabled>
+                </div>
+                <div class="col d-xs-block col-sm-8 col-md-5 col-lg-3 col-xl-3"> 
+                    <form class="d-flex" role="search" action="">
+                        <input class="form-control me-2" type="search" placeholder="ID Cliente" aria-label="ID Cliente">
+                        <button class="btn btn-info" type="button" title="Con fecha actual">Buscar</button>
+                    </form>
+                </div>
+            </div>
+<!-- #endregion container buscar cliente -->
+
+<!-- #region tabla clientes -->
+            <table class="table table-hover mt-5">
+                <thead>
+                    <tr>
+                        <th scope="col">ID Cliente</th>
+                        <th scope="col">Usuario</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Teléfono</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>marto21</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>+57 300 123 4567</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>jabton39</td>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>+57 301 234 5678</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>laller09</td>
+                        <td>Larry</td>
+                        <td>Miller</td>
+                        <td>+57 302 245 6789</td>
+                    </tr>
+                </tbody>
+            </table>
+<!-- #endregion tabla clientes -->
+
+        </div>
+    </div>
+
+    <script>
+        function insertCurrentDateAndTime(){
+            const currentDate = new Date();
+            const arrayDate = `${currentDate.getDate()}/${(currentDate.getMonth()+1)}/${currentDate.getFullYear()}`;
+            document.getElementById("date_delete_reservation").value = arrayDate;
+        };
+
+        window.onload = function () {
+            setTimeout(insertCurrentDateAndTime, 1000);
+        }
+        
+    </script>
+</body>
+</html>
+
+
