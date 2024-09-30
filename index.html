@@ -10,27 +10,27 @@
 
 </head>
 <body>
-    <div class="container">
-        <div class="row">
+    <div class="container vh-100 d-flex justify-content-center align-items-center text-center">
+        <div class="row justify-content-center w-100">
             <div class="col bg d-none d-lg-block col-md-6 col-lg-6 col-xl-6 rounded">
                 <img class="img-fluid" src="./img/image2.png" alt="">
             </div>
-            <div class="col">
-                <div class="text-center">
-                    <h1 class="mb-3">Login</h1>
-                    <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                        <label for="floatingInput">Correo</label>
+            <div class="col d-xs-block col-md-6 col-lg-5 col-xl-5">
+                <h1 class="mb-3">Login</h1>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Correo</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Contraseña</label>
+                </div>
+                <div class="row my-3 justify-content-center w-100">
+                    <div class="d-grid gap-2 col-6 col-md-6 col-lg-7 col-xl-7">
+                        <a type="button" href="./php/view/addReservation.html" class="btn btn-outline-primary">Iniciar sesión</a>
+                        <a type="button" href="./register.html" class="btn btn-outline-danger">Registrarme</a>
                     </div>
-                    <div class="form-floating">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                        <label for="floatingPassword">Contraseña</label>
-                    </div>
-                    <div class="col-6 d-grid gap-2 my-3 mx-auto">
-                        <a type="button" href="./php/view/addView.php" class="btn btn-primary">Iniciar sesión</a>
-                        <a type="button" href="./register.html" class="btn btn-secondary">Registrarme</a>
-                        <a href="#" class="a-hover">¿Contraseña olvidada?</a>
-                    </div>
+                    <a href="#" class="a-hover mt-3">¿Contraseña olvidada?</a>
                 </div>
             </div>
         </div>
