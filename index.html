@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
-    <link rel="icon" href="./icons/user-solid-24.png" type="image/x-icon">
+    <link rel="icon" href="./icons/log-in-regular-24.png" type="image/x-icon">
     <link rel="stylesheet" href="./index.css">
 
 </head>
@@ -13,7 +13,7 @@
     <div class="container vh-100 d-flex justify-content-center align-items-center text-center">
         <div class="row justify-content-center w-100">
             <div class="col bg d-none d-lg-block col-md-6 col-lg-6 col-xl-6 rounded">
-                <img class="img-fluid" src="./img/image2.png" alt="">
+                <img class="img-fluid border rounded shadow" src="./img/salon-2589649_1920.jpg" alt="">
             </div>
             <div class="col d-xs-block col-md-6 col-lg-5 col-xl-5">
                 <h1 class="mb-3">Login</h1>
@@ -28,13 +28,39 @@
                 <div class="row my-3 justify-content-center w-100">
                     <div class="d-grid gap-2 col-6 col-md-6 col-lg-7 col-xl-7">
                         <a type="button" href="./php/view/addReservation.html" class="btn btn-outline-primary">Iniciar sesión</a>
-                        <a type="button" href="./register.html" class="btn btn-outline-danger">Registrarme</a>
+                        <a type="button" href="./register.html" class="btn btn-outline-success">Registrarme</a>
                     </div>
-                    <a href="#" class="a-hover mt-3">¿Contraseña olvidada?</a>
+                    
+                    <div class="d-grid mt-2 col-6 col-md-6 col-lg-6 col-xl-6">
+                        <button type="button" class="btn-outline-secondary" style="background-color: transparent; border: none; color: #134eec;" data-bs-toggle="modal" data-bs-target="#modalFunctionUnused">¿Contraseña olvidada?</button>
+                        <!-- #region modal opcion sin uso -->
+                        <!-- Modal -->
+                        <div class="modal fade" id="modalFunctionUnused" tabindex="-1" aria-labelledby="exampleModalFunction" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Función no disponible</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Lamentamos que se encuentre con este mensaje pero, está función no está disponible en el momento, esperamos pronto resolver este problema.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- #endregion modal opcion sin uso-->  
+                    </div>
+
+
                 </div>
             </div>
+
         </div>
     </div>
 
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

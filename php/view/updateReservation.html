@@ -78,14 +78,14 @@
     </div>
 
     <script>
-        function insertCurrentDateAndTime(){
+        function insertCurrentDate(){
             const currentDate = new Date();
             const arrayDate = `${currentDate.getDate()}/${(currentDate.getMonth()+1)}/${currentDate.getFullYear()}`;
             document.getElementById("date_update_reservation").value = arrayDate;
         };
 
         window.onload = function () {
-            setTimeout(insertCurrentDateAndTime, 1000);
+            setTimeout(insertCurrentDate, 1000);
         }
         
     </script>
