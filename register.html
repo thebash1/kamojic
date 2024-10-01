@@ -22,7 +22,7 @@
                     <h2 class="fs-1 text-center">Crea tu cuenta</h2>
                     <p class="text-center">Es totalmente gratis</p>
 
-<!-- #region formulario de registro -->
+                    <!-- #region formulario de registro -->
                     <form action="#">
                         <div class="d-flex input-group mb-2">
                             <div class="form-floating">
@@ -84,7 +84,7 @@
                     </div>
 
                 </div>
-<!-- #endregion formulario de registro-->
+                <!-- #endregion formulario de registro-->
               
             </div>
         </div>
@@ -92,14 +92,14 @@
 
 
     <script>
-        function insertCurrentDate(){
+        function insertCurrentDateAndTime(){
             const currentDate = new Date();
-            const arrayDate = `${currentDate.getDate()}/${(currentDate.getMonth()+1)}/${currentDate.getFullYear()}`;
-            document.getElementById("formDateRegister").value = arrayDate;
+            const arrayDateTime = `${currentDate.getDate()}/${(currentDate.getMonth()+1)}/${currentDate.getFullYear()} - ${currentDate.toLocaleTimeString()}`;
+            document.getElementById("formDateRegister").value = arrayDateTime;
         };
 
         window.onload = function () {
-            setTimeout(insertCurrentDate, 1000);
+            setTimeout(insertCurrentDateAndTime, 5000);
         }
         
     </script>

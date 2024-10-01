@@ -182,7 +182,8 @@ transform: scaleX(1);
     font-size: 18px;
 }
 
-@media (max-width: 540px){
+
+@media screen and(max-width: 540px){
 
     .table{
         font-size: 12px;

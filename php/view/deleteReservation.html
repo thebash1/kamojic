@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="shortcut icon" href="../../icons/user-x-regular-24.png" type="image/x-icon">
     <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
@@ -23,21 +24,42 @@
                 </ul>
             </nav>
 
-<!-- #region container buscar cliente -->
+            <!-- #region container buscar cliente -->
             <div class="row my-1 justify-content-center">
-                <div class="col d-xs-block col-sm-4 col-md-3 col-lg-2 col-xl-2">
-                    <input class="form-control" type="text" placeholder="Fecha" aria-label="Fecha" id="date_delete_reservation" name="date_delete_reservation" value="" disabled>
+                <div class="col-5 d-xs-block col-sm-6 col-md-5 col-lg-4 col-xl-3">
+                    <input class="form-control" type="datetime-local" aria-label="Fecha y hora" id="calendarDeleteReservation" name="calendarDeleteReservation" required>
                 </div>
-                <div class="col d-xs-block col-sm-8 col-md-5 col-lg-3 col-xl-3"> 
+                <div class="col-7 d-xs-block col-sm-6 col-md-5 col-lg-4 col-xl-3"> 
                     <form class="d-flex" role="search" action="">
                         <input class="form-control me-3" type="search" placeholder="ID Cliente" aria-label="ID Cliente">
-                        <button class="btn btn-info" type="button" title="Con fecha actual">Buscar</button>
+                        <button class="btn btn-info" type="button" title="Con fecha actual" data-bs-toggle="modal" data-bs-target="#modalFunctionUnused">Buscar</button>
                     </form>
                 </div>
             </div>
-<!-- #endregion container buscar cliente-->
+            <!-- #endregion container buscar cliente-->
 
-<!-- #region tabla clientes -->
+            <!-- #region modal opcion sin uso -->
+            <!-- Modal -->
+            <div class="modal fade" id="modalFunctionUnused" tabindex="-1" aria-labelledby="exampleModalFunction" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Función no disponible</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Lamentamos que se encuentre con este mensaje pero, está función no está disponible en el momento, esperamos pronto resolver este problema.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #endregion modal opcion sin uso--> 
+
+
+            <!-- #region tabla clientes -->
             <table class="table table-hover mt-5">
                 <thead>
                     <tr>
@@ -72,11 +94,12 @@
                     </tr>
                 </tbody>
             </table>
-<!-- #endregion tabla clientes -->
+            <!-- #endregion tabla clientes -->
 
         </div>
     </div>
 
+    <script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script>
         function insertCurrentDate(){
             const currentDate = new Date();
