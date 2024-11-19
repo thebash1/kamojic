@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de cambios</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./php/view/style.css">
+    <link rel="shortcut icon" href="./icons/cycle.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <h1 class="my-3">Solicitud de cambios</h1>
+            <nav class="navbar mb-3">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item"><a class="nav-link text-body" href="./addReservationClient.html">Agendar cita</a></li>
+                    <li class="nav-item"><a class="nav-link text-body" id="logout" name="logout" href="../../index.html">Cerrar sesión</a></li>
+                </ul>
+            </nav>
+
+            <!-- #region modal opcion sin uso -->
+            <!-- Modal -->
+            <div class="modal fade" id="modalFunctionUnused" tabindex="-1" aria-labelledby="exampleModalFunction" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Función no disponible</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Lamentamos que se encuentre con este mensaje pero, está función no está disponible en el momento, esperamos pronto resolver este problema.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #endregion modal opcion sin uso--> 
+
+            <!-- #region seccion agregar clientes -->
+            <div class="row my-1 justify-content-center">
+                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
+                    <input type="text" class="form-control" placeholder="Usuario" aria-label="Usuario" id="userClient" name="name_client" required>
+                </div>
+                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
+                    <input type="text" class="form-control" placeholder="Nombres" aria-label="Nombres" id="nameClient" name="last_name_client" required>
+                </div>
+            </div>
+            <div class="row my-1 justify-content-center">
+                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
+                    <input type="text" class="form-control" placeholder="Apellidos" aria-label="Apellidos" name="lastNameClient" id="phone_client" required>
+                </div>
+                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
+                    <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+                    <select class="form-select" id="autoSizingSelect" required>
+                        <option id="default_gender" name="default_gender" selected>Cambio a realizar</option>
+                        <option id="gender_1" name="gender1" value="1">Modificar fecha</option>
+                        <option id="gender_2" name="gender2" value="2">Cancelar cita</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row my-1 justify-content-center">
+                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
+                    <input type="text" class="form-control" placeholder="Servicio elegido" aria-label="Servicio" id="service" name="service" required>
+                </div>
+                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
+                    <input class="form-control" type="datetime-local" id="calendarAddReservation" name="calendarAddReservation" required>
+                </div>
+            </div>
+            
+            <div class="row my-1 justify-content-center">
+                <div class="col d-xs-block col-md-12 col-lg-8 col-xl-8">
+                    <textarea class="form-control" placeholder="Escribe aquí tu razón de esta acción..." id="textareaDescription" style="height: 100px" required></textarea>
+                    <label for="textareaDescription"></label>
+                </div>
+            </div>
+ 
+            <div class="row justify-content-center">
+                <div class="d-grid gap-2 col-6 col-md-4 col-lg-3 col-xl-3">
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalFunctionUnused">Guardar</button>
+                    <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalFunctionUnused">Cancelar</button>
+                </div>
+            </div>
+
+            <!-- #region btn modo noche -->
+            <!-- <div class="mode">
+                <button class="btn-mode" type="button" id="toggleButton"><img src="../../icons/moon-regular-24.png" alt=""></button>
+            </div> -->
+            <!-- #endregion btn modo noche -->
+
+            <!-- #endregion seccion agregar clientes -->
+        </div>
+    </div>
+
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
