@@ -1,20 +1,37 @@
+git config --list --show-origin -> ver todas las configuraciones actuales y en donde se están usando
+
+* configurando el usuario y correo de la cuenta de github *
+
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+-------------------------------------------------------------
+
 git init -> inicializar un proyecto, es decir, gitbash creará los archivos necesarios para establecer conexión con el servidor en la nube
 
 git add . -> agregar todos los cambios al repositorio o rama actual
 
-git add 'archivo' -> agregar a la rama o repositorio los cambios de un archivo en especifico
+git add file -> agregar a la rama o repositorio los cambios de un archivo en especifico
 
-git clone 'link' -> clonar repositorio existente en github
+git clone https://example.com -> clonar repositorio existente en github
 
 git branch -a -> listar las ramas que se encuentran en el proyecto creadas
 
-git checkout 'rama' -> util para cambiar entre una rama y otra que se encuentren en el proyecto
+git checkout branch1/branch2 -> util para cambiar entre una rama y otra que se encuentren en el proyecto
 
 git status -> ver el estado de las modificaciones realizadas en el proyecto
 
 git status -s -> ver es estado de las moficiaciones actuales de manera resumida 
 
-git pull -> 
+git pull -> trae desde el repositorio web al repositorio local los archivos que hacen falta
 
-git push origin 'rama principal' ->
+git push origin main/master -> envia todos los cambios a la rama de origen
 
+git branch branchExample -> crea una rama en el proyecto
+
+git branch -d localBranchName -> borrar rama en repositorio local
+
+git push origin --delete remoteBranchName -> borrar rama en repositorio web o remoto de github
+
+git log branchName --not main -> listar commits de una rama en especifico
+
+git fetch --prune -> actualiza referencias locales de ramas remotas (en este caso del repositorio en github)
