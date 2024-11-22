@@ -25,8 +25,8 @@
             <div class="col d-flex justify-content-end gap-3">
                 <a type="button" href="../../../index.html" class="btn btn-secondary">Regresar</a>
                 <a type="button" href="./addUser.html" class="btn btn-primary">Agregar usuario</a>
-                <a type="button" href="#" class="btn btn-warning">Actualizar usuario</a>
-                <a type="button" href="#" class="btn btn-danger">Eliminar usuario</a>
+                <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#staticUpdateUser">Actualizar usuario</button>
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticDeleteUser">Eliminar usuario</button>
             </div>
         </div>
 
@@ -93,5 +93,21 @@
     </div>
 
     <script src="../../../bootstrap/js/bootstrap.min.js"></script>
+    <!-- Script para cargar el modal actualizar usuario -->
+    <script>
+        document.querySelector('button[data-bs-target="#staticUpdateUser"]').addEventListener('click', async () => {
+            // Cargar el contenido del modal desde el archivo updateUser.html
+            const response = await fetch('./updateUser.html');
+            const modalHTML = await response.text();
+            document.body.insertAdjacentHTML('beforeend', modalHTML);
+        });
+
+        document.querySelector('button[data-bs-target="#staticDeleteUser"]').addEventListener('click', async () => {
+            // Cargar el contenido del modal desde el archivo deleteUser.html
+            const response = await fetch('./deleteUser.html');
+            const modalHTML = await response.text();
+            document.body.insertAdjacentHTML('beforeend', modalHTML);
+        });
+    </script>
 </body>
 </html>
