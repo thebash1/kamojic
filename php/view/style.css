@@ -174,9 +174,12 @@ a::before{
 }
 
 a:hover::before{
-transform-origin: left;
-transform: scaleX(1);
+    transform-origin: left;
+    transform: scaleX(1);
 }
+
+
+@media screen and(max-width: 540px){
 
 .table{
     font-size: 18px;
@@ -184,6 +187,7 @@ transform: scaleX(1);
 
 
 @media screen(max-width: 540px){
+
 
     .table{
         font-size: 12px;

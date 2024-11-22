@@ -1,0 +1,20 @@
+git init -> inicializar un proyecto, es decir, gitbash creará los archivos necesarios para establecer conexión con el servidor en la nube
+
+git add . -> agregar todos los cambios al repositorio o rama actual
+
+git add 'archivo' -> agregar a la rama o repositorio los cambios de un archivo en especifico
+
+git clone 'link' -> clonar repositorio existente en github
+
+git branch -a -> listar las ramas que se encuentran en el proyecto creadas
+
+git checkout 'rama' -> util para cambiar entre una rama y otra que se encuentren en el proyecto
+
+git status -> ver el estado de las modificaciones realizadas en el proyecto
+
+git status -s -> ver es estado de las moficiaciones actuales de manera resumida 
+
+git pull -> 
+
+git push origin 'rama principal' ->
+

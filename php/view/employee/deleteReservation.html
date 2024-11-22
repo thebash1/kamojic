@@ -4,23 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Borrar</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="shortcut icon" href="../../icons/user-x-regular-24.png" type="image/x-icon">
-    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="../../../icons/delete.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
 
 </head>
 <body>
 
     <div class="container">
         <div class="row justify-content-center">
-            <h1 class="text-center my-3">Borrar citas</h1>
+            <h1 class="text-center my-3">Eliminar citas</h1>
             <nav class="navbar mb-3">
                 <ul class="nav justify-content-center">
                     <li class="nav-item"><a class="nav-link text-body" href="./addReservation.html">Agregar cita</a></li>
                     <li class="nav-item"><a class="nav-link text-body" href="./updateReservation.html">Actualizar cita</a></li>
                     <li class="nav-item"><a class="nav-link text-body" href="./searchReservation.html">Buscar cita</a></li>
-                    <li class="nav-item"><a class="nav-link text-body" id="logout" name="logout" href="../../index.html">Cerrar sesión</a></li>
+                    <li class="nav-item"><a class="nav-link text-body" id="logout" name="logout" href="../../../index.html">Cerrar sesión</a></li>
                 </ul>
             </nav>
 
@@ -63,7 +62,7 @@
             <table class="table table-hover mt-5">
                 <thead>
                     <tr>
-                        <th scope="col">ID Cliente</th>
+                        <th scope="col">ID</th>
                         <th scope="col">Usuario</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Apellido</th>
@@ -99,7 +98,7 @@
         </div>
     </div>
 
-    <script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script>
         function insertCurrentDate(){
             const currentDate = new Date();
