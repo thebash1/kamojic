@@ -20,6 +20,77 @@
                     <li class="nav-item"><a class="nav-link text-body" id="logout" name="logout" href="../../index.html">Cerrar sesión</a></li>
                 </ul>
             </nav>
+
+            <!-- #region seccion agregar usuarios -->
+            <div class="row my-1 justify-content-center">
+                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
+                    <input type="text" class="form-control" placeholder="Usuario" aria-label="usuario" id="userName" name="user_name" required>
+                </div>
+                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
+                    <input class="form-control" type="text" placeholder="Contraseña" aria-label="contraseña" id="userPassword" name="password_user" required>
+                </div>
+            </div>
+
+            <div class="row my-1 justify-content-center">
+                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
+                    <input type="text" class="form-control" placeholder="Nombres" aria-label="Nombres" id="userFirstName" name="user_firstname" required>
+                </div>
+                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
+                    <input type="text" class="form-control" placeholder="Apellidos" aria-label="Apellidos" id="userLastName" name="user_lastname" required>
+                </div>
+            </div>
+
+            <div class="row my-1 justify-content-center">
+                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
+                    <input type="text" class="form-control" placeholder="Teléfono" aria-label="Teléfono" name="phone_user" id="phoneUser" required>
+                </div>
+                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
+                    <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+                    <select class="form-select" id="autoSizingSelect" required>
+                        <option id="default_gender" name="default_gender" selected>Sexo</option>
+                        <option id="male" name="male" value="1">Masculino</option>
+                        <option id="female" name="female" value="2">Femenino</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row my-1 justify-content-center">
+                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
+                    <input type="text" class="form-control" placeholder="Fecha de registro" aria-label="Fecha de registro" name="user_date_register" id="userDateRegister" disabled>
+                </div>
+                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
+                    <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+                    <select class="form-select" id="autoSizingSelect" required>
+                        <option id="default_gender" name="default_gender" selected>Rol</option>
+                        <option id="employee" name="employee" value="1">Empleado</option>
+                        <option id="client" name="client" value="2">Cliente</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row my-1 justify-content-center">
+                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
+                    <input class="form-control" type="datetime-local" id="calendarAddReservation" name="calendarAddReservation" required>
+                </div>
+                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
+                    <input type="text" class="form-control" placeholder="Cita pendiente" aria-label="Estado" id="status" name="status" disabled>
+                </div>
+            </div>
+            
+            <div class="row my-3 justify-content-center">
+                <div class="d-grid gap-2 col-6 col-md-4 col-lg-3 col-xl-3">
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalFunctionUnused">Guardar</button>
+                    <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalFunctionUnused">Cancelar</button>
+                </div>
+            </div>
+
+            <!-- #region btn modo noche -->
+            <!-- <div class="mode">
+                <button class="btn-mode" type="button" id="toggleButton"><img src="../../icons/moon-regular-24.png" alt=""></button>
+            </div> -->
+            <!-- #endregion btn modo noche -->
+
+            <!-- #endregion seccion agregar usuarios -->
         </div>
     </div>
 </body>
