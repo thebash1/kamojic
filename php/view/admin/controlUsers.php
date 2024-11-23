@@ -40,17 +40,20 @@
                             <th scope="col">Usuario</th>
                             <th scope="col">Nombre</th>
                             <th scope="col">Apellido</th>
+                            <th scope="col">Rol</th>
                             <th scope="col">Teléfono</th>
-                            <th scope="col">Elegir</th>
+                            <th scope="col">#</th>
                         </tr>
                     </thead>
                     <tbody>
+                        
                         <tr>
                             <th scope="row">1</th>
                             <td>marto21</td>
                             <td>Mark</td>
                             <td>Otto</td>
                             <td>+57 300 123 4567</td>
+                            <td>Empleado</td>
                             <td>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="option" id="radioUser1">
@@ -64,6 +67,7 @@
                             <td>Jacob</td>
                             <td>Thornton</td>
                             <td>+57 301 234 5678</td>
+                            <td>Empleado</td>
                             <td>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="option" id="radioUser2">
@@ -77,6 +81,7 @@
                             <td>Larry</td>
                             <td>Miller</td>
                             <td>+57 302 245 6789</td>
+                            <td>Empleado</td>
                             <td>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="option" id="radioUser3">
@@ -84,6 +89,7 @@
                                 </div>
                             </td>
                         </tr>
+                        
                     </tbody>
                 </table>
             </div>
