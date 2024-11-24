@@ -45,16 +45,15 @@
                 <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
                     <label class="visually-hidden" for="autoSizingSelect">Preference</label>
                     <select class="form-select" id="autoSizingSelect" required>
-                        <option id="default_gender" name="default_gender" selected>Sexo</option>
-                        <option id="male" name="male" value="1">Masculino</option>
-                        <option id="female" name="female" value="2">Femenino</option>
+                        <option id="masculino" name="masculino" value="1">Masculino</option>
+                        <option id="femenino" name="femenino" value="2">Femenino</option>
                     </select>
                 </div>
             </div>
 
             <div class="row my-1 justify-content-center">
                 <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
-                    <input type="text" class="form-control" placeholder="Fecha de registro" aria-label="Fecha de registro" name="user_date_register" id="userDateRegister" disabled>
+                    <input type="text" class="form-control" name="userDateRegister" id="userDateRegister" placeholder="Fecha de registro" aria-label="Fecha de registro" data-bs-toggle="tooltip" data-bs-title="Default tooltip" disabled>
                 </div>
                 <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
                     <label class="visually-hidden" for="autoSizingSelect">Preference</label>
@@ -63,15 +62,6 @@
                         <option id="employee" name="employee" value="1">Empleado</option>
                         <option id="client" name="client" value="2">Cliente</option>
                     </select>
-                </div>
-            </div>
-
-            <div class="row my-1 justify-content-center">
-                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
-                    <input class="form-control" type="datetime-local" id="calendarAddReservation" name="calendarAddReservation" required>
-                </div>
-                <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
-                    <input type="text" class="form-control" placeholder="Cita pendiente" aria-label="Estado" id="status" name="status" disabled>
                 </div>
             </div>
             
@@ -91,5 +81,19 @@
             <!-- #endregion seccion agregar usuarios -->
         </div>
     </div>
+
+    <script>
+        function insertCurrentDateAndTime(){
+            const currentDate = new Date();
+            const arrayDate = `${currentDate.getDate()}/${(currentDate.getMonth()+1)}/${currentDate.getFullYear()}`;
+            document.getElementById("userDateRegister").value = arrayDate;
+        };
+
+        window.onload = function () {
+            setTimeout(insertCurrentDateAndTime, 2000);
+        }
+        
+    </script>
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

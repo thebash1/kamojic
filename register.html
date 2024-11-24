@@ -25,13 +25,25 @@
                     <form action="#">
                         <div class="d-flex input-group mb-2">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="floatingName" placeholder="Nombres" value="" required>
+                                <input type="text" class="form-control" name="floatingName" id="floatingName" placeholder="Nombres" value="" required>
                                 <label for="floatingName">Nombres</label>
                             </div>
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="floatingLastName" placeholder="Apellidos" value="" required>
+                                <input type="text" class="form-control" name="floatingLastName" id="floatingLastName" placeholder="Apellidos" value="" required>
                                 <label for="floatingLastName">Apellidos</label>
                             </div>
+                        </div>
+
+                        <div class="d-flex input-group mb-2">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" name="floatingUser" id="floatingUser" placeholder="Usuario">
+                                <label for="floatingUser">Usuario</label>
+                            </div>
+                            <select class="form-select" id="autoSizingSelect" required>
+                                <option id="masculino" name="masculino" value="1" selected>Masculino</option>
+                                <option id="femenino" name="femenino" value="2">Femenino</option>
+                            </select>
+                        
                         </div>
 
                         <div class="form-floating mb-2">
@@ -93,12 +105,12 @@
     <script>
         function insertCurrentDateAndTime(){
             const currentDate = new Date();
-            const arrayDateTime = `${currentDate.getDate()}/${(currentDate.getMonth()+1)}/${currentDate.getFullYear()} - ${currentDate.toLocaleTimeString()}`;
-            document.getElementById("formDateRegister").value = arrayDateTime;
+            const arrayDate = `${currentDate.getDate()}/${(currentDate.getMonth()+1)}/${currentDate.getFullYear()}`;
+            document.getElementById("formDateRegister").value = arrayDate;
         };
 
         window.onload = function () {
-            setTimeout(insertCurrentDateAndTime, 5000);
+            setTimeout(insertCurrentDateAndTime, 2000);
         }
         
     </script>
