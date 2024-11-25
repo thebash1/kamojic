@@ -37,7 +37,7 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">ID</th>
+                                <th scope="col">ID Usuario</th>
                                 <th scope="col">Usuario</th>
                                 <th scope="col">Nombre</th>
                                 <th scope="col">Apellido</th>
@@ -99,6 +99,7 @@
                 </div>
             </div>
         </div>
+<!-- #endregion tabla usuarios -->
 
         <section class="modal-update-user">
             <!-- #region modal actualizar usuario -->
@@ -110,11 +111,83 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <p>Hola, esto es una prueba</p>
+                        <div class="row">
+                            <div class="col-auto">
+                                <label for="idUser" class="col-form-label">ID Usuario</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="text" id="idUser" name="idUser" class="form-control" value="1" disabled>
+                            </div>
+                        </div>
+
+                        <div class="row my-2">
+                            <div class="col-auto">
+                                <label for="userName" class="col-form-label">Usuario</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="text" id="userName" name="userName" class="form-control" placeholder="Nuevo usuario" value="marto21">
+                            </div>
+                        </div>
+
+                        <div class="row my-2">
+                            <div class="col-auto">
+                                <label for="userName" class="col-form-label">Nombre</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="text" name="userName" id="userName" class="form-control" placeholder="Nuevo nombre" value="Mark">
+                            </div>
+                        </div>
+
+                        <div class="row my-2">
+                            <div class="col-auto">
+                                <label for="userLastName" class="col-form-label">Apellido</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="text" name="userLastName" id="userLastName" class="form-control" placeholder="Nuevo apellido" value="Otto">
+                            </div>
+                        </div>
+
+                        <div class="row my-2">
+                            <div class="col-auto">
+                                <label for="rolUser" class="col-form-label">Rol</label>
+                            </div>
+                            <div class="col-auto">
+                                <select class="form-select" aria-label="Rol">
+                                    <option value="1" selected>Empleado</option>
+                                    <option value="2">Cliente</option>
+                                </select>
+                            </div>
+                            <div class="col-auto">
+                                <label for="idRolUser" class="col-form-label">ID Rol</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="text" id="idRolUser" name="idRolUser" class="form-control" value="1" disabled>
+                            </div>
+                        </div>
+
+                        <div class="row my-2">
+                            <div class="col-auto">
+                                <label for="phoneUser" class="col-form-label">Teléfono</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="text" name="phoneUser" id="phoneUser" class="form-control" placeholder="Teléfono nuevo" value="+57 3001234567">
+                            </div>
+                        </div>
+
+                        <div class="row my-2">
+                            <div class="col-auto">
+                                <label for="dateRegisterUser" class="col-form-label">Fecha registrado</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="text" name="dateRegisterUser" id="dateRegisterUser" class="form-control" placeholder="Fecha registrado" value="10/10/2024" disabled>
+                            </div>
+                        </div>
+
                     </div>
+
                     <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-primary">Guardar</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
                     </div>
                 </div>
                 </div>
@@ -135,8 +208,8 @@
                         <p>Hola, esto es una prueba</p>
                     </div>
                     <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-primary">Guardar</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
                     </div>
                 </div>
                 </div>

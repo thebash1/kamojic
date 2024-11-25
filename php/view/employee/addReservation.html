@@ -71,11 +71,17 @@
                     <input type="text" class="form-control" placeholder="Teléfono" aria-label="Teléfono" name="phone-client" id="phone_client" required>
                 </div>
                 <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
-                    <label class="visually-hidden" for="autoSizingSelect">Preference</label>
-                    <select class="form-select" id="autoSizingSelect" required>
-                        <option id="masculino" name="masculino" value="1" selected>Masculino</option>
-                        <option id="femenino" name="femenino" value="2">Femenino</option>
-                    </select>
+                    <div class="row">
+                        <div class="col-3 text-center">
+                            <label class="col-form-label" for="autoSizingSelect">Sexo</label>
+                        </div>
+                        <div class="col">
+                            <select class="form-select" id="autoSizingSelect" required>
+                                <option id="male" name="male" value="1" selected>Masculino</option>
+                                <option id="female" name="female" value="2">Femenino</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
             </div>
 

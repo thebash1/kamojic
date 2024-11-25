@@ -21,81 +21,106 @@
                     <li class="nav-item"><a class="nav-link text-body" href="./searchReservation.html">Buscar cita</a></li>
                     <li class="nav-item"><a class="nav-link text-body" id="logout" name="logout" href="../../../index.html">Cerrar sesión</a></li>
                 </ul>
-            </nav>
+            </nav>    
+        </div>
 
-            <!-- #region container buscar cliente -->
-            <div class="row my-1 justify-content-center">
-                <div class="col-5 d-xs-block col-sm-6 col-md-5 col-lg-4 col-xl-3">
-                    <input class="form-control" type="datetime-local" aria-label="Fecha y hora" id="calendarDeleteReservation" name="calendarDeleteReservation" required>
-                </div>
-                <div class="col-7 d-xs-block col-sm-6 col-md-5 col-lg-4 col-xl-3"> 
-                    <form class="d-flex" role="search" action="">
-                        <input class="form-control me-3" type="search" placeholder="ID Cliente" aria-label="ID Cliente">
-                        <button class="btn btn-info" type="button" title="Con fecha actual" data-bs-toggle="modal" data-bs-target="#modalFunctionUnused">Buscar</button>
-                    </form>
-                </div>
+        <!-- #region container buscar cliente -->
+        <div class="row my-1 justify-content-center">
+            <div class="col-5 d-xs-block col-sm-6 col-md-5 col-lg-4 col-xl-3">
+                <input class="form-control" type="datetime-local" aria-label="Fecha y hora" id="calendarDeleteReservation" name="calendarDeleteReservation" required>
             </div>
-            <!-- #endregion container buscar cliente-->
+            <div class="col-7 d-xs-block col-sm-6 col-md-5 col-lg-4 col-xl-3"> 
+                <form class="d-flex" role="search" action="">
+                    <input class="form-control me-3" type="search" placeholder="ID Cliente" aria-label="ID Cliente">
+                    <button class="btn btn-info" type="button" title="Con fecha actual" data-bs-toggle="modal" data-bs-target="#modalFunctionUnused">Buscar</button>
+                </form>
+            </div>
+        </div>
+        <!-- #endregion container buscar cliente-->
 
-            <!-- #region modal opcion sin uso -->
-            <!-- Modal -->
-            <div class="modal fade" id="modalFunctionUnused" tabindex="-1" aria-labelledby="exampleModalFunction" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Función no disponible</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <p>Lamentamos que se encuentre con este mensaje pero, está función no está disponible en el momento, esperamos pronto resolver este problema.</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
-                        </div>
+        <!-- #region modal opcion sin uso -->
+        <!-- Modal -->
+        <div class="modal fade" id="modalFunctionUnused" tabindex="-1" aria-labelledby="exampleModalFunction" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Función no disponible</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Lamentamos que se encuentre con este mensaje pero, está función no está disponible en el momento, esperamos pronto resolver este problema.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
                     </div>
                 </div>
             </div>
-            <!-- #endregion modal opcion sin uso--> 
-
-
-            <!-- #region tabla clientes -->
-            <table class="table table-hover mt-5">
-                <thead>
-                    <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Usuario</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Apellido</th>
-                        <th scope="col">Teléfono</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>marto21</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>+57 300 123 4567</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>jabton39</td>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>+57 301 234 5678</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>laller09</td>
-                        <td>Larry</td>
-                        <td>Miller</td>
-                        <td>+57 302 245 6789</td>
-                    </tr>
-                </tbody>
-            </table>
-            <!-- #endregion tabla clientes -->
-
         </div>
+        <!-- #endregion modal opcion sin uso--> 
+        
+        <!-- #region tabla clientes -->
+        <div class="row">
+            <div class="col">
+                <div class="table-resposive mt-5"></div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Usuario</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Apellido</th>
+                                <th scope="col">Teléfono</th>
+                                <th scope="col">#</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>marto21</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>3001234567</td>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="option" id="radioUser3">
+                                        <label class="form-check-label" for="radioUser3"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>jabton39</td>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>3012345678</td>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="option" id="radioUser3">
+                                        <label class="form-check-label" for="radioUser3"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>laller09</td>
+                                <td>Larry</td>
+                                <td>Miller</td>
+                                <td>3022456789</td>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="option" id="radioUser3">
+                                        <label class="form-check-label" for="radioUser3"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- #endregion tabla clientes -->
+
+    
     </div>
 
     <script src="../../../bootstrap/js/bootstrap.bundle.min.js"></script>

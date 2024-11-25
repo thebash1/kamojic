@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-11-2024 a las 21:08:27
+-- Tiempo de generación: 25-11-2024 a las 15:47:48
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -30,14 +30,14 @@ SET time_zone = "+00:00";
 CREATE TABLE `admin` (
   `id_admin` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
-  `id_rol` int(11) DEFAULT NULL,
-  `register_user` varchar(20) NOT NULL,
-  `password_user` varchar(20) NOT NULL,
+  `id_rol` int(11) NOT NULL,
+  `user_name` varchar(20) NOT NULL,
+  `password_user` char(255) NOT NULL,
   `name` varchar(100) NOT NULL,
   `last_name` varchar(100) NOT NULL,
   `phone` varchar(10) NOT NULL,
   `rol_name` varchar(20) NOT NULL,
-  `register_date` timestamp NOT NULL DEFAULT current_timestamp()
+  `register_date` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -49,14 +49,14 @@ CREATE TABLE `admin` (
 CREATE TABLE `customers` (
   `id_customer` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
-  `id_rol` int(11) DEFAULT NULL,
-  `register_user` varchar(20) NOT NULL,
-  `password_user` varchar(20) NOT NULL,
+  `id_rol` int(11) NOT NULL,
+  `user_name` varchar(20) NOT NULL,
+  `password_user` char(255) NOT NULL,
   `name` varchar(100) NOT NULL,
   `last_name` varchar(100) NOT NULL,
   `phone` varchar(10) NOT NULL,
   `rol_name` varchar(20) NOT NULL,
-  `register_date` timestamp NOT NULL DEFAULT current_timestamp()
+  `register_date` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -68,14 +68,14 @@ CREATE TABLE `customers` (
 CREATE TABLE `employees` (
   `id_employee` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
-  `id_rol` int(11) DEFAULT NULL,
-  `register_user` varchar(20) NOT NULL,
-  `password_user` varchar(20) NOT NULL,
+  `id_rol` int(11) NOT NULL,
+  `user_name` varchar(20) NOT NULL,
+  `password_user` char(255) NOT NULL,
   `name` varchar(100) NOT NULL,
   `last_name` varchar(100) NOT NULL,
   `phone` varchar(10) NOT NULL,
   `rol_name` varchar(20) NOT NULL,
-  `register_date` timestamp NOT NULL DEFAULT current_timestamp()
+  `register_date` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -87,19 +87,19 @@ CREATE TABLE `employees` (
 CREATE TABLE `payments` (
   `id_payment` int(11) NOT NULL,
   `id_customer` int(11) NOT NULL,
-  `id_reservation` int(11) DEFAULT NULL,
-  `id_service` int(11) DEFAULT NULL,
+  `id_reservation` int(11) NOT NULL,
+  `id_service` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
   `last_name` varchar(100) NOT NULL,
   `phone` varchar(10) NOT NULL,
-  `register_date` timestamp NOT NULL DEFAULT current_timestamp(),
+  `register_date` datetime NOT NULL DEFAULT current_timestamp(),
   `requested_form` varchar(20) NOT NULL,
   `service_name` varchar(100) NOT NULL,
   `description` varchar(255) NOT NULL,
-  `price` decimal(4,2) NOT NULL,
+  `price` int(11) NOT NULL,
   `time_scale` time NOT NULL DEFAULT curtime(),
   `payment_method` varchar(20) NOT NULL,
-  `payment_date` timestamp NOT NULL DEFAULT current_timestamp()
+  `payment_date` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -112,15 +112,15 @@ CREATE TABLE `reservations` (
   `id_reservation` int(11) NOT NULL,
   `id_employee` int(11) NOT NULL,
   `id_customer` int(11) NOT NULL,
-  `id_service` int(11) DEFAULT NULL,
-  `id_payment` int(11) DEFAULT NULL,
+  `id_service` int(11) NOT NULL,
+  `id_payment` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
   `last_name` varchar(100) NOT NULL,
   `phone` varchar(10) NOT NULL,
   `state` varchar(20) NOT NULL,
   `payment_method` varchar(20) NOT NULL,
   `requested_form` varchar(20) NOT NULL,
-  `register_date` timestamp NOT NULL DEFAULT current_timestamp()
+  `register_date` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -154,7 +154,7 @@ CREATE TABLE `services` (
   `service_name` varchar(100) NOT NULL,
   `description` varchar(255) NOT NULL,
   `time_scale` time NOT NULL DEFAULT curtime(),
-  `price` decimal(4,2) NOT NULL
+  `price` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -165,14 +165,14 @@ CREATE TABLE `services` (
 
 CREATE TABLE `users` (
   `id_user` int(11) NOT NULL,
-  `id_rol` int(11) DEFAULT NULL,
-  `register_user` varchar(20) NOT NULL,
-  `password_user` varchar(20) NOT NULL,
+  `id_rol` int(11) NOT NULL,
+  `user_name` varchar(20) NOT NULL,
+  `password_user` char(255) NOT NULL,
   `name` varchar(100) NOT NULL,
   `last_name` varchar(100) NOT NULL,
   `phone` varchar(10) NOT NULL,
   `rol_name` varchar(20) NOT NULL,
-  `register_date` timestamp NOT NULL DEFAULT current_timestamp()
+  `register_date` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
