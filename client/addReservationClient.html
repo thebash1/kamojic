@@ -120,10 +120,10 @@
 
     </div>
 
-    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    
     <script>
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+        const tooltipList = [tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
         // document.getElementById('alertCalendar').addEventListener('click', function(){
         //     alert('Elija correctamente la fecha y hora de acuerdo al horario de trabajo del local');
         // });
@@ -139,6 +139,8 @@
             setTimeout(insertCurrentDateAndTime, 1000);
         }
     </script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
 
