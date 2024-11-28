@@ -18,10 +18,13 @@
 
 // declarando las variables para la conexión en la base de datos
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$db_name = "db_kamojic";
+$host = "bog73rokq73llaexnpqe-mysql.services.clever-cloud.com";
+$user = "uux18nm9deg50sq3";
+$password = "uux18nm9deg50sq3";
+$database = "bog73rokq73llaexnpqe";
+$url_db = "
+mysql://uux18nm9deg50sq3:58bbU3YefYLg6hYzuAvq@bog73rokq73llaexnpqe-mysql.services.clever-cloud.com:3306/bog73rokq73llaexnpqe
+";
 $port = 3306;
 $path = "extension=/path/to/extension/mysqli.so";
 
