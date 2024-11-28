@@ -1,4 +1,4 @@
-#region estructura html
+<!-- #region estructura html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,14 +8,14 @@
     <link rel="shortcut icon" href="../../icons/server.png" type="image/x-icon">
 </head>
 <body>
-    
+
 </body>
 </html>
 
 <!-- #endregion estructura html -->
 
 <?php
-
+// creado clase para conectar base de datos
 class Database
 {
     private $hostname = "bog73rokq73llaexnpqe-mysql.services.clever-cloud.com";
@@ -41,9 +41,8 @@ class Database
     }
 
 
-}
-
-// declarando las variables para la conexión en la base de datos
+} 
+// linea final de la clase 
 
 // $host = "bog73rokq73llaexnpqe-mysql.services.clever-cloud.com";
 // $user = "uux18nm9deg50sq3";
