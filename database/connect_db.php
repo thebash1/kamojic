@@ -6,22 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Localhost</title>
     <link rel="shortcut icon" href="../../icons/server.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
 
 <!-- #endregion estructura html -->
 
 <?php
-// creado clase para conectar base de datos
+// creado clase para conectar base de datos con infinitefree
 class Database
 {
-    private $hostname = "bog73rokq73llaexnpqe-mysql.services.clever-cloud.com";
-    private $database = "bog73rokq73llaexnpqe";
-    private $username = "uux18nm9deg50sq3";
-    private $password = "uux18nm9deg50sq3";
+    private $hostname = "sql311.infinityfree.com";
+    private $database = "if0_37810355_db_kamojic";
+    private $username = "if0_37810355";
+    private $password = "1HhFx7F57ie";
     private $charset = "utf8_mb4_general_ci";
 
     function conectionDB(){
