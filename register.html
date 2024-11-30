@@ -4,105 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
+    <link rel="stylesheet" href="./home/footer.css">
     <link rel="shortcut icon" href="./icons/register.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="./login.css"> -->
 </head>
 <body>
 
-    <div class="container vh-100 d-flex justify-content-center align-items-center text-center" id="background">
-        <div class="row justify-content-center w-100">
-            <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded">
-                <img class="img-fluid border rounded shadow" src="./img/beauty-salon-4043096_1920.jpg" alt="" style="height: 700px; width: 800px; object-fit: cover;">
-            </div>
-            <div class="col d-xs-block col-md-6 col-lg-5 col-xl-5">
-                <div class="text-center">
-                    <img class="mb-5" src="./img/logo-icon-title.png" alt="" style="width: 60px; height: auto;">
-                    <h2 class="fs-1 text-center">Crea tu cuenta</h2>
-                    <p class="text-center">Es totalmente gratis</p>
+    <div class="container-father">
+        <header>
 
-                    <!-- #region formulario de registro -->
-                    <form action="#">
-                        <div class="d-flex input-group mb-2">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" name="floatingName" id="floatingName" placeholder="Nombres" value="" required>
-                                <label for="floatingName">Nombres</label>
-                            </div>
-                            <div class="form-floating">
-                                <input type="text" class="form-control" name="floatingLastName" id="floatingLastName" placeholder="Apellidos" value="" required>
-                                <label for="floatingLastName">Apellidos</label>
-                            </div>
-                        </div>
+        </header>
 
-                        <div class="d-flex input-group mb-2">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" name="floatingUser" id="floatingUser" placeholder="Usuario">
-                                <label for="floatingUser">Usuario</label>
-                            </div>
-                            <select class="form-select" id="autoSizingSelect" required>
-                                <option id="masculino" name="masculino" value="1" selected>Masculino</option>
-                                <option id="femenino" name="femenino" value="2">Femenino</option>
-                            </select>
-                        
-                        </div>
-
-                        <div class="form-floating mb-2">
-                            <input type="text" class="form-control" id="floatingPhone" placeholder="Teléfono" value="" required>
-                            <label for="floatingPhone">Teléfono</label>
-                        </div>
-
-                        <!-- <div class="d-flex input-group mb-2">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" id="floatingAddress" placeholder="Dirección" value="" required>
-                                <label for="floatingAddress">Dirección</label>
-                            </div>
-                            <div class="form-floating">
-                                <input type="text" class="form-control" id="floatingQuarter" placeholder="Barrio" value="" required>
-                                <label for="floatingBarrio">Barrio</label>
-                            </div>
-                        </div> -->
-
-                        <div class="d-flex mb-3">
-                            <label class="text-center me-3" for="formDate">Fecha de registro</label>
-                            <input type="text" class="form-control" id="formDateRegister" placeholder="Fecha" value="" disabled>
-                        </div>
-                    </form>
-
-                    <div class="row my-3 align-items-center justify-content-center w-100 mx-auto">
-                        <div class="d-grid gap-2 col-6 col-md-6 col-lg-7 col-xl-7">
-                            <a type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalFunctionUnused">Guardar</a>   
-                            <!-- #region modal opcion sin uso -->
-                            <!-- Modal -->
-                            <div class="modal fade" id="modalFunctionUnused" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalFunction" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Función no disponible</h1>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p>Lamentamos que se encuentre con este mensaje pero, está función no está disponible en el momento, esperamos pronto resolver este problema.</p>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
-                                        </div>
+        <main>
+            <div class="container vh-100 d-flex justify-content-center align-items-center text-center" id="background">
+                <div class="row justify-content-center w-100">
+                    <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded">
+                        <img class="img-fluid border rounded shadow" src="./img/beauty-salon-4043096_1920.jpg" alt="" style="height: 700px; width: 800px; object-fit: cover;">
+                    </div>
+                    <div class="col d-xs-block col-md-6 col-lg-5 col-xl-5">
+                        <div class="text-center">
+                            <img class="mb-5" src="./img/logo-icon-title.png" alt="" style="width: 60px; height: auto;">
+                            <h2 class="fs-1 text-center">Crea tu cuenta</h2>
+                            <p class="text-center">Es totalmente gratis</p>
+        
+                            <!-- #region formulario de registro -->
+                            <form action="#">
+                                <div class="d-flex input-group mb-2">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" name="floatingName" id="floatingName" placeholder="Nombres" value="" required>
+                                        <label for="floatingName">Nombres</label>
+                                    </div>
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" name="floatingLastName" id="floatingLastName" placeholder="Apellidos" value="" required>
+                                        <label for="floatingLastName">Apellidos</label>
                                     </div>
                                 </div>
+        
+                                <div class="d-flex input-group mb-2">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" name="floatingUser" id="floatingUser" placeholder="Usuario">
+                                        <label for="floatingUser">Usuario</label>
+                                    </div>
+                                    <select class="form-select" id="autoSizingSelect" required>
+                                        <option id="masculino" name="masculino" value="1" selected>Masculino</option>
+                                        <option id="femenino" name="femenino" value="2">Femenino</option>
+                                    </select>
+                                
+                                </div>
+        
+                                <div class="form-floating mb-2">
+                                    <input type="text" class="form-control" id="floatingPhone" placeholder="Teléfono" value="" required>
+                                    <label for="floatingPhone">Teléfono</label>
+                                </div>
+        
+                                <!-- <div class="d-flex input-group mb-2">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="floatingAddress" placeholder="Dirección" value="" required>
+                                        <label for="floatingAddress">Dirección</label>
+                                    </div>
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="floatingQuarter" placeholder="Barrio" value="" required>
+                                        <label for="floatingBarrio">Barrio</label>
+                                    </div>
+                                </div> -->
+        
+                                <div class="d-flex mb-3">
+                                    <label class="text-center me-3" for="formDate">Fecha de registro</label>
+                                    <input type="text" class="form-control" id="formDateRegister" placeholder="Fecha" value="" disabled>
+                                </div>
+                            </form>
+        
+                            <div class="row my-3 align-items-center justify-content-center w-100 mx-auto">
+                                <div class="d-grid gap-2 col-6 col-md-6 col-lg-7 col-xl-7">
+                                    <a type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalFunctionUnused">Guardar</a>   
+                                    <!-- #region modal opcion sin uso -->
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="modalFunctionUnused" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalFunction" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Función no disponible</h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Lamentamos que se encuentre con este mensaje pero, está función no está disponible en el momento, esperamos pronto resolver este problema.</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- #endregion modal opcion sin uso-->  
+                                </div>
                             </div>
-                            <!-- #endregion modal opcion sin uso-->  
+                            <div class="col">
+                                <a href="./index.html" class="a-hover mt-3" style="text-decoration: none;">¿Tienes una cuenta?</a>
+                            </div>
+        
                         </div>
+                        <!-- #endregion formulario de registro-->
+                      
                     </div>
-                    <div class="col">
-                        <a href="./index.html" class="a-hover mt-3" style="text-decoration: none;">¿Tienes una cuenta?</a>
-                    </div>
-
                 </div>
-                <!-- #endregion formulario de registro-->
-              
             </div>
-        </div>
-    </div>
+        </main>
 
+        <footer class="text-body text-center mt-5 mb-0">
+            <p>© 2024 Kamojic. Todos los derechos reservados.</p>
+        </footer>
+    </div>
 
     <script>
         function insertCurrentDateAndTime(){
