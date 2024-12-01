@@ -1,23 +1,22 @@
 <?php
-
-// creando código para conectarme a la base de datos
-
-$servername = "sql311.infinityfree.com";
-$username = "if0_37810355"; 
-$password = "1HhFx7F57ie";
-$dbname = "if0_37810355_db_kamojic";
-
-// Crear conexión
-$conn = new mysqli($servername, $username, $password, $dbname);
-
 // Verificar conexión
-try{
-    echo "Conexión establecida";
-}
-catch(mysqli_sql_exception){    
-    echo "Conexión fallida";
-}
+function connectDB($host, $username, $password, $dbname) {
+    try {
+        // Crear una nueva conexión con mysqli
+        $conn = new mysqli($host, $username, $password, $dbname);
 
+        // Verificar si hay error en la conexión
+        if ($conn->connect_error) {
+            throw new Exception("Error de conexión: " . $conn->connect_error);
+        }
+        return $conn; // Retornar la conexión si es exitosa
+    
+    } catch (Exception $e) {
+        // Mostrar el mensaje de error
+        echo "<script>alert('No se pudo conectar a la base de datos: " . $e->getMessage() . "');</script>";
+        return null; // Retornar null si hay un error
+    }
+}
 
 // creado clase para conectar base de datos con infinitefree
 // class Database
@@ -75,17 +74,5 @@ catch(mysqli_sql_exception){
 // echo "date " . date("d/m/y") . "<br>";
 // echo "time " . $date->format("H:i:s") . "<br>";
 // $date = date("d/m/y") ." ". date("i:h:sa") .",";
-
-function showInfo():void{
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $name = $_POST['name'];
-        $lastname =$_POST['last_name'];
-        echo "Datos: \n $name $lastname";
-    } else {
-        echo "No se recibieron datos.";
-    }
-}
-
-
 
 ?>

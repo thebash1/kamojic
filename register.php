@@ -1,5 +1,6 @@
 <?php
     include './database/connectDB.php';
+    include './database/config.php';
 ?>
 
 <!DOCTYPE html>
@@ -130,10 +131,6 @@
 
 <?php
 
-if($conn->connect_error){
-    echo "se ha perdido la conexión con el servidor";
-}
-else{
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "Formulario fue recibido: ", json_encode($_POST);
     }
@@ -162,6 +159,5 @@ else{
     // else {
     //     echo "No se enviaron datos";
     // }
-}
 
 ?>
