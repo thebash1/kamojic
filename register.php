@@ -27,7 +27,7 @@
                             <p class="text-center">Es totalmente gratis</p>
         
                             <!-- #region formulario de registro -->
-                            <form method="POST" action="https://kamojic.fwh.is/mvc/model/users/registerUser.php">
+                            <form method="POST" action="<?php htmlspecialchars($SERVER['./mvc/model/users/registerUser.php'])?>">
                                 <div class="d-flex input-group mb-2">
                                     <div class="form-floating">
                                         <input type="text" class="form-control" name="name" id="name" placeholder="Nombres" value="" required>
