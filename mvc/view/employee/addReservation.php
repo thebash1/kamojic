@@ -105,10 +105,17 @@
                     </div>
         
                     <div class="row my-1 justify-content-center">
-                        <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
-                            <input class="form-control" type="datetime-local" id="calendarAddReservation" name="calendarAddReservation" required>
+                        <div class="col-6 d-xs-block col-md-6 col-lg-4 col-xl-4">
+                            <div class="row align-items-center">
+                                <div class="col-3">
+                                    <a class="btn" href="#" onclick="alert('la casilla blanca es para la fecha')"><img src="../icons/schedule.png" alt="calendar"></a>
+                                </div>
+                                <div class="col-9">
+                                    <input class="form-control" type="datetime-local" placeholder="Calendario" id="calendarAddReservation" name="calendarAddReservation" required>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
+                        <div class="col-6 d-xs-block col-md-6 col-lg-4 col-xl-4">
                             <input type="text" class="form-control" placeholder="Cita pendiente" aria-label="Estado" id="status" name="status" disabled>
                         </div>
                     </div>

@@ -18,9 +18,9 @@
                     <h1 class="text-center my-2">Agendar citas</h1>
                     <nav class="navbar">
                         <ul class="nav nav-underline justify-content-center flex-grow-1">
-                            <li class="nav-item"><a class="nav-link text-body" id="homePage" name="homePage" href="../home/home.html">Regresar</a></li>
-                            <li class="nav-item"><a class="nav-link text-body" href="./requestChanges.html">Solicitar cambios</a></li>
-                            <li class="nav-item"><a class="nav-link text-body" id="logout" name="logout" href="../index.html">Cerrar sesión</a></li>
+                            <li class="nav-item"><a class="nav-link text-body" id="homePage" name="homePage" href="../home/home.php">Regresar</a></li>
+                            <li class="nav-item"><a class="nav-link text-body" href="./requestChanges.php">Solicitar cambios</a></li>
+                            <li class="nav-item"><a class="nav-link text-body" id="logout" name="logout" href="../index.php">Cerrar sesión</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -106,7 +106,7 @@
                     <div class="col-6 d-xs-block col-md-6 col-lg-4 col-xl-4">
                         <div class="row align-items-center">
                             <div class="col-3">
-                                <a class="btn" href="#"><img src="../icons/schedule.png" alt="calendar"></a>
+                                <a class="btn" href="#" onclick="alert('la casilla blanca es para la fecha')"><img src="../icons/schedule.png" alt="calendar"></a>
                             </div>
                             <div class="col-9">
                                 <input class="form-control" type="datetime-local" placeholder="Calendario" id="calendarAddReservation" name="calendarAddReservation" required>
