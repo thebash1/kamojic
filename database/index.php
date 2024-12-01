@@ -19,7 +19,6 @@
                     <div class="col">
                         <p class="text-start">Esta página es para conectarse con el server de infinitefree</p>
                         <p class="text-start">Estado: <?php include './connect_db.php'?></p>
-
                     </div>
                 </div>
             </div>
