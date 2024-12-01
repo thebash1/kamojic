@@ -32,7 +32,7 @@
                             <p class="text-center">Es totalmente gratis</p>
         
                             <!-- #region formulario de registro -->
-                            <form method="POST" action="<?php htmlspecialchars($_SERVER['PHP_SELF'])?>">
+                            <form method="POST" action="<?php echo htmlspecialchars($_SERVER[''])?>">
                                 <div class="d-flex input-group mb-2">
                                     <div class="form-floating">
                                         <input type="text" class="form-control" name="name" id="name" placeholder="Nombres" value="" required>
@@ -88,7 +88,7 @@
                                     <button type="submit" class="btn btn-outline-success" onclick="alert('datos enviados')">Guardar</button>   
                                     <!-- #region modal opcion sin uso -->
                                     <!-- Modal -->
-                                    <div class="modal fade" id="modalFunctionUnused" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalFunction" aria-hidden="true">
+                                    <!-- <div class="modal fade" id="modalFunctionUnused" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalFunction" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered">
                                             <div class="modal-content">
                                                 <div class="modal-header">
@@ -103,17 +103,15 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <!-- #endregion modal opcion sin uso-->  
                                 </div>
                             </div>
                             <div class="col">
                                 <a href="./index.php" class="a-hover mt-3" style="text-decoration: none;">¿Tienes una cuenta?</a>
                             </div>
-        
                         </div>
                         <!-- #endregion formulario de registro-->
-                      
                     </div>
                 </div>
             </div>
@@ -131,10 +129,30 @@
 
 <?php
 
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        echo "Formulario fue recibido: ", json_encode($_POST);
+    if($_SERVER['REQUEST_METHOD'] === 'POST') {
+        var_dump($_POST);
+        connectDB($host, $username, $password, $dbname);
+        echo '<br>';
+        showReg();
     }
-    echo "NADA LLEGÓ";
+
+    function showReg():void{
+        $name = $_POST['name'] ?? 'no recibido';
+        $lastname = $_POST['last_name'] ?? 'no recibido';
+        $username = $_POST['user_name'] ?? 'no recibido';
+        $password = $_POST['password_user'] ?? 'no recibido';
+        $phone = $_POST['phone'] ?? 'no recibido';
+        $sex = $_POST['sex'] ?? 'no recibido';
+
+        echo "Datos: ($name, $lastname, $username, $password, $phone, $sex)";
+    }
+    echo '<br><br>';
+ 
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+
+
 
     // // Verificar si los datos fueron enviados por el formulario
     // if($_SERVER['REQUEST_METHOD'] === 'POST') {

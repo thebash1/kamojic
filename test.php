@@ -44,14 +44,14 @@
 </html>
 
 <?php
-
+    
     connectDB($host,$username,$password,$dbname);
     echo "<br><br>";
     showInfo();
     function showInfo():void{
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $name = $_POST['name'];
-            $lastname =$_POST['last_name'];
+            $lastname = $_POST['last_name'];
             echo "Datos: $name $lastname";
         } else {
             echo "No se recibieron datos.";
