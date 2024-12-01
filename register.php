@@ -1,5 +1,5 @@
 <?php
-    include '../../../database/connectDB.php';
+    include './database/connectDB.php';
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +31,7 @@
                             <p class="text-center">Es totalmente gratis</p>
         
                             <!-- #region formulario de registro -->
-                            <form method="POST" action="<?php htmlspecialchars($SERVER['./registerUser.php'])?>">
+                            <form method="POST" action="<?php htmlspecialchars($_SERVER['PHP_SELF'])?>">
                                 <div class="d-flex input-group mb-2">
                                     <div class="form-floating">
                                         <input type="text" class="form-control" name="name" id="name" placeholder="Nombres" value="" required>
@@ -123,19 +123,45 @@
         </footer>
     </div>
 
-    <script>
-        function insertCurrentDateAndTime(){
-            const currentDate = new Date();
-            const arrayDate = `${currentDate.getDate()}/${(currentDate.getMonth()+1)}/${currentDate.getFullYear()}`;
-            document.getElementById("formDateRegister").value = arrayDate;
-        };
-
-        window.onload = function () {
-            setTimeout(insertCurrentDateAndTime, 2000);
-        }
-        
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>
 </html>
+
+<?php
+
+if($conn->connect_error){
+    echo "se ha perdido la conexión con el servidor";
+}
+else{
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        echo "Formulario fue recibido: ", json_encode($_POST);
+    }
+    echo "NADA LLEGÓ";
+
+    // // Verificar si los datos fueron enviados por el formulario
+    // if($_SERVER['REQUEST_METHOD'] === 'POST') {
+    //     //obtener información de formulario de registro
+    //     $name = trim($_POST['name']);
+    //     $lastname = trim($_POST['last_name']);
+    //     $username = trim($_POST['user_name']);
+    //     $password = trim($_POST['password_user']);
+    //     $phone = trim($_POST['phone']);
+    //     $option_sex = trim($_POST['sex']);
+    //     $sex = "masculino";
+    //     if($option_sex != 1) {
+    //         $sex = "femenino";
+    //     }
+    
+    //     // Mostrar los datos recibidos
+    //     echo "datos ---> usuario: $username, contraseña: $password, nombre: $name, apellido: $lastname, teléfono: $phone, sexo: $sex";
+    
+    //     // código para insertar en la base de datos...
+    //     // Redirigir a la misma página para que se recargues
+    // }
+    // else {
+    //     echo "No se enviaron datos";
+    // }
+}
+
+?>

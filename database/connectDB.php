@@ -75,4 +75,17 @@ catch(mysqli_sql_exception){
 // echo "date " . date("d/m/y") . "<br>";
 // echo "time " . $date->format("H:i:s") . "<br>";
 // $date = date("d/m/y") ." ". date("i:h:sa") .",";
+
+function showInfo():void{
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $name = $_POST['name'];
+        $lastname =$_POST['last_name'];
+        echo "Datos: \n $name $lastname";
+    } else {
+        echo "No se recibieron datos.";
+    }
+}
+
+
+
 ?>
