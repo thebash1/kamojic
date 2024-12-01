@@ -31,7 +31,7 @@
                         </div>
                         <div class="row justify-content-center my-3 w-100 mx-auto">
                             <div class="d-grid gap-2 col-6 col-md-6 col-lg-7 col-xl-7">
-                                <a type="button" href="./home/home.html" class="btn btn-outline-primary">Iniciar sesión</a>
+                                <a type="button" href="./home/home.php" class="btn btn-outline-primary">Iniciar sesión</a>
                                 <a type="button" href="./register.php" class="btn btn-outline-success">Registrarme</a>
                             </div>
                         </div>

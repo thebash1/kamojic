@@ -1,5 +1,4 @@
 <?php
-    include '../../../database/connectDB.php';
 
 // Verificar si los datos fueron enviados por el formulario
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {

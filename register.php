@@ -1,3 +1,7 @@
+<?php
+    include '../../../database/connectDB.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +31,7 @@
                             <p class="text-center">Es totalmente gratis</p>
         
                             <!-- #region formulario de registro -->
-                            <form method="POST" action="<?php htmlspecialchars($SERVER['./mvc/model/users/registerUser.php'])?>">
+                            <form method="POST" action="<?php htmlspecialchars($SERVER['./registerUser.php'])?>">
                                 <div class="d-flex input-group mb-2">
                                     <div class="form-floating">
                                         <input type="text" class="form-control" name="name" id="name" placeholder="Nombres" value="" required>
@@ -103,7 +107,7 @@
                                 </div>
                             </div>
                             <div class="col">
-                                <a href="./index.html" class="a-hover mt-3" style="text-decoration: none;">¿Tienes una cuenta?</a>
+                                <a href="./index.php" class="a-hover mt-3" style="text-decoration: none;">¿Tienes una cuenta?</a>
                             </div>
         
                         </div>

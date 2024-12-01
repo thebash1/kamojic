@@ -21,11 +21,11 @@
                                 <a class="text-body fw-semibold fs-4" href="#" style="text-decoration: none; cursor: no-drop;">Kamojic</a>
                             </div>
                             <ul class="nav nav-underline justify-content-center flex-grow-1">
-                                <li class="nav-item"><a class="nav-link text-body" href="./home.html">Inicio</a></li>
-                                <li class="nav-item"><a class="nav-link text-body" href="./offerts.html">Ofertas</a></li>
-                                <li class="nav-item"><a class="nav-link text-body" href="./reservations.html">Citas</a></li>
-                                <li class="nav-item"><a class="nav-link text-body" href="./about_us.html">Sobre nosotros</a></li>
-                                <li class="nav-item"><a class="nav-link text-body" href="../index.html">Cerrar sesión</a></li>
+                                <li class="nav-item"><a class="nav-link text-body" href="./home.php">Inicio</a></li>
+                                <li class="nav-item"><a class="nav-link text-body" href="./offerts.php">Ofertas</a></li>
+                                <li class="nav-item"><a class="nav-link text-body" href="./reservations.php">Citas</a></li>
+                                <li class="nav-item"><a class="nav-link text-body" href="./about_us.php">Sobre nosotros</a></li>
+                                <li class="nav-item"><a class="nav-link text-body" href="../index.php">Cerrar sesión</a></li>
                             </ul>
                             <div class="d-flex align-items-center">
                                 <a href="#" data-bs-toggle="tooltip" data-bs-title="Información de usuario">

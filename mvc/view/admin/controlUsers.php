@@ -28,9 +28,9 @@
                 
                 <div class="row">
                     <div class="col d-flex justify-content-end gap-3">
-                        <a type="button" href="../../../home/home.html" class="btn btn-secondary">Ir a inicio</a>
-                        <a type="button" href="../../view/employee/addReservation.html" class="btn btn-secondary">Citas</a>
-                        <a type="button" href="./addUser.html" class="btn btn-primary">Agregar usuario</a>
+                        <a type="button" href="../../../home/homeAdmin.php" class="btn btn-secondary">Ir a inicio</a>
+                        <a type="button" href="../../view/employee/addReservation.php" class="btn btn-secondary">Citas</a>
+                        <a type="button" href="./addUser.php" class="btn btn-primary">Agregar usuario</a>
                         <button type="button" class="btn btn-warning" id="btnUpdateUser">Actualizar usuario</button>
                         <button type="button" class="btn btn-danger" id="btnDeleteUser">Eliminar usuario</button>
                     </div>

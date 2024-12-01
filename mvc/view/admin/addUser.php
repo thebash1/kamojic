@@ -17,8 +17,8 @@
                     <h1 class="text-center">Agregar usuario</h1>
                     <nav class="navbar">
                         <ul class="nav nav-underline justify-content-center align-items-center flex-grow-1">
-                            <li class="nav-item"><a class="nav-link text-body" href="./controlUsers.html">Regresar</a></li>
-                            <li class="nav-item"><a class="nav-link text-body" id="logout" name="logout" href="../../../index.html">Cerrar sesión</a></li>
+                            <li class="nav-item"><a class="nav-link text-body" href="./controlUsers.php">Regresar</a></li>
+                            <li class="nav-item"><a class="nav-link text-body" id="logout" name="logout" href="../../../index.php">Cerrar sesión</a></li>
                         </ul>
                     </nav>
                 </div>
