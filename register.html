@@ -27,7 +27,7 @@
                             <p class="text-center">Es totalmente gratis</p>
         
                             <!-- #region formulario de registro -->
-                            <form method="POST" action="./mvc/model/users/registerUser.php">
+                            <form method="POST" action="https://kamojic.fwh.is/mvc/model/users/registerUser.php">
                                 <div class="d-flex input-group mb-2">
                                     <div class="form-floating">
                                         <input type="text" class="form-control" name="name" id="name" placeholder="Nombres" value="" required>
@@ -45,7 +45,7 @@
                                         <label for="user_name">Usuario</label>
                                     </div>
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" name="password_user" id="password_user" placeholder="Contraseña">
+                                        <input type="password" class="form-control" name="password_user" id="password_user" placeholder="Contraseña">
                                         <label for="password_user">Contraseña</label>
                                     </div>
                                 </div>
@@ -80,7 +80,7 @@
         
                             <div class="row my-3 align-items-center justify-content-center w-100 mx-auto">
                                 <div class="d-grid gap-2 col-6 col-md-6 col-lg-7 col-xl-7">
-                                    <a type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalFunctionUnused">Guardar</a>   
+                                    <button type="submit" class="btn btn-outline-success" onclick="alert('datos enviados')">Guardar</button>   
                                     <!-- #region modal opcion sin uso -->
                                     <!-- Modal -->
                                     <div class="modal fade" id="modalFunctionUnused" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalFunction" aria-hidden="true">
@@ -94,7 +94,7 @@
                                                     <p>Lamentamos que se encuentre con este mensaje pero, está función no está disponible en el momento, esperamos pronto resolver este problema.</p>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="submit" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+                                                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -132,5 +132,6 @@
         
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 </body>
 </html>
