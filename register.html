@@ -27,37 +27,37 @@
                             <p class="text-center">Es totalmente gratis</p>
         
                             <!-- #region formulario de registro -->
-                            <form action="#">
+                            <form method="POST" action="./mvc/model/users/registerUser.php">
                                 <div class="d-flex input-group mb-2">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" name="floatingName" id="floatingName" placeholder="Nombres" value="" required>
-                                        <label for="floatingName">Nombres</label>
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="Nombres" value="" required>
+                                        <label for="name">Nombres</label>
                                     </div>
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" name="floatingLastName" id="floatingLastName" placeholder="Apellidos" value="" required>
-                                        <label for="floatingLastName">Apellidos</label>
+                                        <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Apellidos" value="" required>
+                                        <label for="last_name">Apellidos</label>
                                     </div>
                                 </div>
         
                                 <div class="d-flex input-group mb-2">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" name="floatingUser" id="floatingUser" placeholder="Usuario">
-                                        <label for="floatingUser">Usuario</label>
+                                        <input type="text" class="form-control" name="user_name" id="user_name" placeholder="Usuario">
+                                        <label for="user_name">Usuario</label>
                                     </div>
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" name="floatingPassword" id="floatingPassword" placeholder="Contraseña">
-                                        <label for="floatingPassword">Contraseña</label>
+                                        <input type="text" class="form-control" name="password_user" id="password_user" placeholder="Contraseña">
+                                        <label for="password_user">Contraseña</label>
                                     </div>
                                 </div>
         
                                 <div class="d-flex input-group">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="floatingPhone" placeholder="Teléfono" value="" required>
-                                        <label for="floatingPhone">Teléfono</label>    
+                                        <input type="text" class="form-control" name="phone" id="phone" placeholder="Teléfono" value="" required>
+                                        <label for="phone">Teléfono</label>    
                                     </div>
-                                    <select class="form-select" id="autoSizingSelect" required>
-                                        <option id="masculino" name="masculino" value="1" selected>Masculino</option>
-                                        <option id="femenino" name="femenino" value="2">Femenino</option>
+                                    <select class="form-select" name="sex" id="sex" required>
+                                        <option id="male" name="male" value="1" selected>Masculino</option>
+                                        <option id="female" name="female" value="2">Femenino</option>
                                     </select>
                                 </div>
         
@@ -94,7 +94,7 @@
                                                     <p>Lamentamos que se encuentre con este mensaje pero, está función no está disponible en el momento, esperamos pronto resolver este problema.</p>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+                                                    <button type="submit" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
                                                 </div>
                                             </div>
                                         </div>
