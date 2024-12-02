@@ -1,8 +1,3 @@
-<?php
-    include './database/connectDB.php';
-    include './database/config.php';
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,7 +78,7 @@
                                 </div> -->
                             </form>
         
-                            <div class="row my-3 align-items-center justify-content-center w-100 mx-auto">
+                            <div class="row mt-3 mb-2 align-items-center justify-content-center w-100 mx-auto">
                                 <div class="d-grid gap-2 col-6 col-md-6 col-lg-7 col-xl-7">
                                     <button type="submit" class="btn btn-outline-success" onclick="alert('datos enviados')">Guardar</button>   
                                     <!-- #region modal opcion sin uso -->
@@ -129,30 +124,28 @@
 
 <?php
 
-    if($_SERVER['REQUEST_METHOD'] === 'POST') {
-        var_dump($_POST);
-        connectDB($host, $username, $password, $dbname, $port);
-        echo '<br>';
-        showReg();
-    }
+    // if($_SERVER['REQUEST_METHOD'] === 'POST') {
+    //     var_dump($_POST);
+    //     connectDB($host, $username, $password, $dbname, $port);
+    //     echo '<br>';
+    //     showReg();
+    // }
 
-    function showReg():void{
-        $name = $_POST['name'] ?? 'no recibido';
-        $lastname = $_POST['last_name'] ?? 'no recibido';
-        $username = $_POST['user_name'] ?? 'no recibido';
-        $password = $_POST['password_user'] ?? 'no recibido';
-        $phone = $_POST['phone'] ?? 'no recibido';
-        $sex = $_POST['sex'] ?? 'no recibido';
+    // function showReg():void{
+    //     $name = $_POST['name'] ?? 'no recibido';
+    //     $lastname = $_POST['last_name'] ?? 'no recibido';
+    //     $username = $_POST['user_name'] ?? 'no recibido';
+    //     $password = $_POST['password_user'] ?? 'no recibido';
+    //     $phone = $_POST['phone'] ?? 'no recibido';
+    //     $sex = $_POST['sex'] ?? 'no recibido';
 
-        echo "Datos: ($name, $lastname, $username, $password, $phone, $sex)";
-    }
-    echo '<br><br>';
+    //     echo "Datos: ($name, $lastname, $username, $password, $phone, $sex)";
+    // }
+    // echo '<br><br>';
  
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
-
-
+    // ini_set('display_errors', 1);
+    // ini_set('display_startup_errors', 1);
+    // error_reporting(E_ALL);
 
     // // Verificar si los datos fueron enviados por el formulario
     // if($_SERVER['REQUEST_METHOD'] === 'POST') {

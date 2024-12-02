@@ -30,20 +30,22 @@
                                 <input type="password" class="form-control" name="password" id="password" placeholder="Contraseña">
                                 <label for="password">Contraseña</label>
                             </div>
-                            <div class="row justify-content-center my-3 w-100 mx-auto">
+                            <div class="row justify-content-center mt-3 mb-2 w-100 mx-auto">
                                 <div class="d-grid gap-2 col-6 col-md-6 col-lg-7 col-xl-7">
                                     <button type="submit" href="#" class="btn btn-outline-primary">Iniciar sesión</button>
                                 </div>
                             </div>
                         </form>
-                        <div class="row justify-content-center w-100 mx-auto my-3">
+                        <div class="row justify-content-center w-100 mx-auto mb-2">
                             <div class="d-grid gap-2 col-6 col-md-6 col-lg-7 col-xl-7">    
                                 <a type="button" href="./register.php" class="btn btn-outline-success">Registrarme</a>
                             </div>
                         </div>
-                        <div class="col w-100">
-                            <div class="col col-6 col-md-6 col-lg-6 col-xl-6">
+                        <div class="col text-center">
                             <a href="#" class="a-hover" style="background-color: none; border: none; color: #134eec; text-decoration: none;" data-bs-toggle="modal" data-bs-target="#modalFunctionUnused">¿Contraseña olvidada?</a>
+                        </div>
+                        <div class="col w-100">
+                            <div class="col-6 col-md-6 col-lg-6 col-xl-6">
                                 <!-- #region modal opcion sin uso -->
                                 <!-- Modal -->
                                 <div class="modal fade" id="modalFunctionUnused" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalFunction" aria-hidden="true">
