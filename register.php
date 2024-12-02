@@ -80,7 +80,7 @@
         
                             <div class="row mt-3 mb-2 align-items-center justify-content-center w-100 mx-auto">
                                 <div class="d-grid gap-2 col-6 col-md-6 col-lg-7 col-xl-7">
-                                    <button type="submit" class="btn btn-outline-success" onclick="alert('datos enviados')">Guardar</button>   
+                                    <button type="submit" class="btn btn-outline-success">Guardar</button>   
                                     <!-- #region modal opcion sin uso -->
                                     <!-- Modal -->
                                     <!-- <div class="modal fade" id="modalFunctionUnused" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalFunction" aria-hidden="true">
