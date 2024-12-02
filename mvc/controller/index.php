@@ -2,11 +2,9 @@
     include '../../database/config.php';
     include '../../database/connectDB.php';
 
-    if (empty($_POST['username']) || empty($_POST['password']))
+    if(empty($_POST['username']) || empty($_POST['password']))
     {
-        echo "<script>
-                window.location ='../../index.php';
-                </script>";
+        echo "<script>window.location ='../../index.php';</script>";
         exit();
     }
 

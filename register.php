@@ -27,26 +27,26 @@
                             <p class="text-center">Es totalmente gratis</p>
         
                             <!-- #region formulario de registro -->
-                            <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>">
+                            <form method="POST" action="<?php echo htmlspecialchars($_SERVER['./mvc/controller/registerUser.php'])?>">
                                 <div class="d-flex input-group mb-2">
                                     <div class="form-floating">
                                         <input type="text" class="form-control" name="name" id="name" placeholder="Nombres" value="" required>
                                         <label for="name">Nombres</label>
                                     </div>
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Apellidos" value="" required>
-                                        <label for="last_name">Apellidos</label>
+                                        <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Apellidos" value="" required>
+                                        <label for="lastname">Apellidos</label>
                                     </div>
                                 </div>
         
                                 <div class="d-flex input-group mb-2">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" name="user_name" id="user_name" placeholder="Usuario">
-                                        <label for="user_name">Usuario</label>
+                                        <input type="text" class="form-control" name="username" id="username" placeholder="Usuario">
+                                        <label for="username">Usuario</label>
                                     </div>
                                     <div class="form-floating">
-                                        <input type="password" class="form-control" name="password_user" id="password_user" placeholder="Contraseña">
-                                        <label for="password_user">Contraseña</label>
+                                        <input type="password" class="form-control" name="password" id="password" placeholder="Contraseña">
+                                        <label for="password">Contraseña</label>
                                     </div>
                                 </div>
         
@@ -56,8 +56,8 @@
                                         <label for="phone">Teléfono</label>    
                                     </div>
                                     <select class="form-select" name="sex" id="sex" required>
-                                        <option id="male" name="male" value="1" selected>Masculino</option>
-                                        <option id="female" name="female" value="2">Femenino</option>
+                                        <option id="male" value="male" selected>Masculino</option>
+                                        <option id="female" value="female">Femenino</option>
                                     </select>
                                 </div>
         

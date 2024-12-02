@@ -9,10 +9,10 @@
         }
 
         // Cargar todos los códigos previos
-        $codes_writes = file($file, FILE_IGNORE_NEW_LINES);
+        $codes_load = file($file, FILE_IGNORE_NEW_LINES);
 
         // Si el código ya existe, genera otro
-        while (in_array($code, $codes_writes)) {
+        while (in_array($code, $codes_load)) {
             $code = mt_rand(100000, 999999);
         }
 
