@@ -2,154 +2,79 @@
     include './database/config.php';
     include './database/connectDB.php';
     include './codeSecurity.php';
-    
-    newUser();
-    class UserManager {
+
+    class User {
+        private $id_rol;
+        private $user_name;
+        private $password_user;
+        private $code_security;
+        private $first_name;
+        private $last_name;
+        private $phone;
+        private $rol_name;
+        private $sex;
+        private $register_date;
         private $conn;
+
         public function __construct() {
             include './database/config.php';
             include './database/connectDB.php';
-            $this->conn = connectDB($host, $username, $password, $dbname, $port);;
-        }
-        public function registerUser($userData): void {
-            try {
-                // Iniciar transacción
-                $this->conn->begin_transaction();
-
-                // 1. Insertar en la tabla `users`
-                $stmtUser = $this->conn->prepare("INSERT INTO users (id_rol, user_name, password_user, code_security, name, last_name, phone, rol_name, sex, register_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-                $stmtUser->bind_param(
-                    "isssssssss",
-                    $userData['id_rol'],
-                    $userData['user_name'],
-                    $userData['password_user'],
-                    $userData['code_security'],
-                    $userData['name'],
-                    $userData['last_name'],
-                    $userData['phone'],
-                    $userData['rol_name'],
-                    $userData['sex'],
-                    $userData['register_date']
-                );
-
-                if (!$stmtUser->execute()) {
-                    throw new Exception("Error al insertar en la tabla `users`: " . $stmtUser->error);
-                }
-
-                // Obtener el id_user recién insertado
-                $userId = $this->conn->insert_id;
-
-                // 2. Insertar en la tabla correspondiente según el rol
-                switch ($userData['rol_name']) {
-                    case 'cliente':
-                        $this->insertClient($userId, $userData);
-                        break;
-                    case 'empleado':
-                        $this->insertEmployee($userId, $userData);
-                        break;
-                    default:
-                        throw new Exception("Rol no reconocido.");
-                }
-
-                // Confirmar transacción
-                $this->conn->commit();
-                echo "Usuario registrado exitosamente.";
-
-            } catch (Exception $e) {
-                $this->conn->rollback(); // Revertir transacción en caso de error
-                echo "Error: " . $e->getMessage();
-            }
-        }
-        private function insertClient($userId, $userData) {
-            $stmtClient = $this->conn->prepare("INSERT INTO clientes (id_user, id_rol, user_name, password_user, code_security, name, last_name, phone, rol_name, sex, register_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-            $stmtClient->bind_param(
-                "iisssssssss",
-                $userId,
-                $userData['id_rol'],
-                $userData['user_name'],
-                $userData['password_user'],
-                $userData['code_security'],
-                $userData['name'],
-                $userData['last_name'],
-                $userData['phone'],
-                $userData['rol_name'],
-                $userData['sex'],
-                $userData['register_date']
-            );
-
-            if (!$stmtClient->execute()) {
-                throw new Exception("Error al insertar en la tabla `clientes`: " . $stmtClient->error);
-            }
-        }
-        private function insertEmployee($userId, $userData) {
-            $stmtEmployee = $this->conn->prepare("INSERT INTO empleados (id_user, id_rol, user_name, password_user, code_security, name, last_name, phone, rol_name, sex, register_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-            $stmtEmployee->bind_param(
-                "iisssssssss",
-                $userId,
-                $userData['id_rol'],
-                $userData['user_name'],
-                $userData['password_user'],
-                $userData['code_security'],
-                $userData['name'],
-                $userData['last_name'],
-                $userData['phone'],
-                $userData['rol_name'],
-                $userData['sex'],
-                $userData['register_date']
-            );
-
-            if (!$stmtEmployee->execute()) {
-                throw new Exception("Error al insertar en la tabla `empleados`: " . $stmtEmployee->error);
-            }
-        }
-    }
-
-    function newUser(){
-        // Verificar si se ha enviado el formulario
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            // Crear un array que contenga todos los datos de $_POST
-            $roldefault = 'cliente'; $username = $_POST['username']; $password = $_POST['password']; $name = $_POST['name']; $lastname = $_POST['lastname']; $phone = $_POST['phone']; $sex = $_POST['sex'];
-
+        
+            $this->conn = connectDB($host, $username, $password, $dbname, $port);
             date_default_timezone_set('America/Bogota');
-            $date = date('d/m/y h:i:s');
+        }
 
-            $formDataRegister = [$roldefault,$username, $password, codePassword(), $name, $lastname, $phone, $sex, $date];
+        public function setUserData($user_name, $password_user, $code_security, $first_name, $last_name, $phone, $rol_name, $sex, $id_rol) {
+            $this->user_name = mysqli_real_escape_string($this->conn, $user_name);
+            $this->password_user = mysqli_real_escape_string($this->conn, password_hash($password_user, PASSWORD_DEFAULT));
+            $this->code_security = mysqli_real_escape_string($this->conn, $code_security);
+            $this->first_name = mysqli_real_escape_string($this->conn, $first_name);
+            $this->last_name = mysqli_real_escape_string($this->conn, $last_name);
+            $this->phone = mysqli_real_escape_string($this->conn, $phone);
+            $this->rol_name = mysqli_real_escape_string($this->conn, $rol_name);
+            $this->sex = mysqli_real_escape_string($this->conn, $sex);
+            $this->id_rol = mysqli_real_escape_string($this->conn, $id_rol);
+            $this->register_date = date('Y-m-d H:i:s');
+        }
 
-            // Recorrer los datos enviados y almacenarlos en el array
-            foreach ($_POST as $key => $value) {
-                $formDataRegister[$key] = htmlspecialchars($value, ENT_QUOTES, 'UTF-8'); // Sanitizar los valores
+        public function registerUser() {
+            include './codeSecurity.php';
+
+            // Verifying that id_rol is valid (1, 2, or 3)
+            if ($this->id_rol < 1 || $this->id_rol > 3) {
+                return "ID de rol invalido.";
             }
 
-            $userManager = new UserManager();
-            $userManager->registerUser($formDataRegister);
-            // Ahora $formData contiene todos los datos del formulario
-            echo "<pre>";
-            print_r($formDataRegister); // Mostrar los datos del formulario organizados
-            echo "</pre>";
-        } else {
-            echo "No se ha enviado el formulario.";
+            // Prepare and execute the query
+            $query = 
+                "INSERT INTO users (id_rol, user_name, password_user, code_password, first_name, last_name, phone, rol_name, sex, register_date)
+                VALUES ('$this->id_rol', '$this->user_name', $this->password_user', '$this->code_security', '$this->first_name', '$this->last_name', '$this->phone', '$this->rol_name', '$this->sex', '$this->register_date')";
+
+            if (mysqli_query($this->conn, $query)) {
+                return "Usuario registrado!";
+            } else {
+                return "Error: " . mysqli_error($this->conn);
+            }
         }
     }
 
-    // Ejemplo de uso
-    include 'UserManager.php';
-    // $connect_db = 'connect.php';
-    // $config_db = 'config.php';
+    // Creating a new instance of the User class
+    $user = new User();
+    
+    if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $firstname = $_POST['name'];
+        $lastname = $_POST['lastname'];
+        $phone = $_POST['phone'];
+        $rol = 'cliente';
+        $sex = $_POST['sex'];
+        $idrol = 3;
+        
+        // Setting user data
+        $user->setUserData($username, $password, codePassword(),$firstname, $lastname, $phone, $rol, $sex, $idrol);
 
-    $userManager = new UserManager();
+        echo $user->registerUser();
+    }
 
-    $userData = [
-        'id_rol' => 2, // Cliente o empleado (2 o 3)
-        'user_name' => 'johndoe',
-        'password_user' => password_hash('password123', PASSWORD_DEFAULT),
-        'code_security' => '123456',
-        'name' => 'John',
-        'last_name' => 'Doe',
-        'phone' => '1234567890',
-        'rol_name' => 'cliente', // o 'empleado'
-        'sex' => 'male',
-        'register_date' => date('Y-m-d H:i:s')
-    ];
-
-    $userManager->registerUser($userData);
 ?>
