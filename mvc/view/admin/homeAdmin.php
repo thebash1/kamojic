@@ -34,7 +34,7 @@ if (!isset($_SESSION['username'])){
                                 <li class="nav-item"><a class="nav-link text-body" href="./offertsAdmin.php">Ofertas</a></li>
                                 <li class="nav-item"><a class="nav-link text-body" href="./reservationsAdmin.php">Citas</a></li>
                                 <li class="nav-item"><a class="nav-link text-body" href="./aboutusAdmin.php">Sobre nosotros</a></li>
-                                <li class="nav-item"><a class="nav-link text-body" href="./../employee/addReservation.php">Panel de citas</a></li>
+                                <li class="nav-item"><a class="nav-link text-body" href="./addReservationAdmin.php">Panel de citas</a></li>
                                 <li class="nav-item"><a class="nav-link text-body" href="./controlUsers.php">Panel de usuarios</a></li>
                                 <li class="nav-item"><a class="nav-link text-body" href="../../controller/closeSesion.php">Cerrar sesión</a></li>
                             </ul>
@@ -55,7 +55,7 @@ if (!isset($_SESSION['username'])){
                     <div class="col">
                         <h1 class="display-4 fw-semibold">Bienvenido a Kamojic</h1>
                         <p class="font-monospace">Tu belleza, nuestra pasión.</p>
-                        <a href="../../../client/addReservationClient.php" class="btn btn-primary">Reserva tu cita</a>
+                        <a href="./addReservationAdmin.php" class="btn btn-primary">Reserva tu cita</a>
                     </div>
                 </div>
             </div>

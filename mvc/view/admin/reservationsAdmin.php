@@ -25,7 +25,7 @@
                                 <li class="nav-item"><a class="nav-link text-body" href="./offertsAdmin.php">Ofertas</a></li>
                                 <li class="nav-item"><a class="nav-link text-body" href="./reservationsAdmin.php">Citas</a></li>
                                 <li class="nav-item"><a class="nav-link text-body" href="./aboutusAdmin.php">Sobre nosotros</a></li>
-                                <li class="nav-item"><a class="nav-link text-body" href="./../employee/addReservation.php">Panel de citas</a></li>
+                                <li class="nav-item"><a class="nav-link text-body" href="./addReservationAdmin.php">Panel de citas</a></li>
                                 <li class="nav-item"><a class="nav-link text-body" href="./controlUsers.php">Panel de usuarios</a></li>
                                 <li class="nav-item"><a class="nav-link text-body" href="../../controller/closeSesion.php">Cerrar sesión</a></li>
                             </ul>

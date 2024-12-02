@@ -45,7 +45,7 @@
                     <div class="col">
                         <h1 class="display-4 fw-semibold">Bienvenido a Kamojic</h1>
                         <p class="font-monospace">Tu belleza, nuestra pasión.</p>
-                        <a href="../client/addReservationClient.html" class="btn btn-primary">Reserva tu cita</a>
+                        <a href="./addReservation.php" class="btn btn-primary">Reserva tu cita</a>
                     </div>
                 </div>
             </div>

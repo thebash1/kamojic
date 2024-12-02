@@ -18,10 +18,10 @@
                     <h1 class="text-center mt-3">Eliminar citas</h1>
                     <nav class="navbar">
                         <ul class="nav nav-underline justify-content-center flex-grow-1">
-                            <li class="nav-item"><a class="nav-link text-body" href="./homeEmployee.php">Inicio</a></li>
-                            <li class="nav-item"><a class="nav-link text-body" href="./addReservation.php">Agregar cita</a></li>
-                            <li class="nav-item"><a class="nav-link text-body" href="./updateReservation.php">Actualizar cita</a></li>
-                            <li class="nav-item"><a class="nav-link text-body" href="./searchReservation.php">Buscar cita</a></li>
+                            <li class="nav-item"><a class="nav-link text-body" href="./homeAdmin.php">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link text-body" href="./addReservationAdmin.php">Agregar cita</a></li>
+                            <li class="nav-item"><a class="nav-link text-body" href="./updateReservationAdmin.php">Actualizar cita</a></li>
+                            <li class="nav-item"><a class="nav-link text-body" href="./searchReservationAdmin.php">Buscar cita</a></li>
                             <li class="nav-item"><a class="nav-link text-body" id="logout" name="logout" href="../../controller/closeSesion.php">Cerrar sesión</a></li>
                         </ul>
                     </nav>    
