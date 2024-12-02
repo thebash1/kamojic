@@ -45,7 +45,7 @@
 
 <?php
     
-    connectDB($host,$username,$password,$dbname);
+    connectDB($host,$username,$password,$dbname, $port);
     echo "<br><br>";
     showInfo();
     function showInfo():void{

@@ -32,7 +32,7 @@
                             <p class="text-center">Es totalmente gratis</p>
         
                             <!-- #region formulario de registro -->
-                            <form method="POST" action="<?php echo htmlspecialchars($_SERVER[''])?>">
+                            <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>">
                                 <div class="d-flex input-group mb-2">
                                     <div class="form-floating">
                                         <input type="text" class="form-control" name="name" id="name" placeholder="Nombres" value="" required>
@@ -131,7 +131,7 @@
 
     if($_SERVER['REQUEST_METHOD'] === 'POST') {
         var_dump($_POST);
-        connectDB($host, $username, $password, $dbname);
+        connectDB($host, $username, $password, $dbname, $port);
         echo '<br>';
         showReg();
     }

@@ -1,9 +1,9 @@
 <?php
 // Verificar conexión
-function connectDB($host, $username, $password, $dbname) {
+function connectDB($host, $username, $password, $dbname, $port) {
     try {
         // Crear una nueva conexión con mysqli
-        $conn = new mysqli($host, $username, $password, $dbname);
+        $conn = new mysqli($host, $username, $password, $dbname, $port);
 
         // Verificar si hay error en la conexión
         if ($conn->connect_error) {

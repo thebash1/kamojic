@@ -21,17 +21,23 @@
                     </div>
                     <div class="col d-xs-block col-md-6 col-lg-5 col-xl-5">
                         <h1 class="mb-3">Login</h1>
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingInputUser" placeholder="Usuario">
-                            <label for="floatingInputUser">Usuario</label>
-                        </div>
-                        <div class="form-floating">
-                            <input type="password" class="form-control" id="floatingPasswordUser" placeholder="Contraseña">
-                            <label for="floatingPasswordUser">Contraseña</label>
-                        </div>
-                        <div class="row justify-content-center my-3 w-100 mx-auto">
-                            <div class="d-grid gap-2 col-6 col-md-6 col-lg-7 col-xl-7">
-                                <a type="button" href="./home/home.php" class="btn btn-outline-primary">Iniciar sesión</a>
+                        <form method="POST" action="./mvc/controller/index.php">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" name="username" id="username" placeholder="Usuario">
+                                <label for="username">Usuario</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="password" class="form-control" name="password" id="password" placeholder="Contraseña">
+                                <label for="password">Contraseña</label>
+                            </div>
+                            <div class="row justify-content-center my-3 w-100 mx-auto">
+                                <div class="d-grid gap-2 col-6 col-md-6 col-lg-7 col-xl-7">
+                                    <button type="submit" href="#" class="btn btn-outline-primary">Iniciar sesión</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="row justify-content-center w-100 mx-auto">
+                            <div class="d-grid gap-2 col-6 col-md-6 col-lg-7 col-xl-7">    
                                 <a type="button" href="./register.php" class="btn btn-outline-success">Registrarme</a>
                             </div>
                         </div>
