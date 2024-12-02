@@ -27,7 +27,7 @@
                                 <li class="nav-item"><a class="nav-link text-body" href="./aboutusAdmin.php">Sobre nosotros</a></li>
                                 <li class="nav-item"><a class="nav-link text-body" href="./../employee/addReservation.php">Panel de citas</a></li>
                                 <li class="nav-item"><a class="nav-link text-body" href="./controlUsers.php">Panel de usuarios</a></li>
-                                <li class="nav-item"><a class="nav-link text-body" href="../index.php">Cerrar sesión</a></li>
+                                <li class="nav-item"><a class="nav-link text-body" href="../../controller/closeSesion.php">Cerrar sesión</a></li>
                             </ul>
                             <div class="d-flex align-items-center">
                                 <a href="#" data-bs-toggle="tooltip" data-bs-title="Información de usuario">
