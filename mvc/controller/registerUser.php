@@ -3,15 +3,14 @@
     include './database/connectDB.php';
     include './codeSecurity.php';
     
+    newUser();
     class UserManager {
         private $conn;
-
         public function __construct() {
             include './database/config.php';
             include './database/connectDB.php';
             $this->conn = connectDB($host, $username, $password, $dbname, $port);;
         }
-
         public function registerUser($userData): void {
             try {
                 // Iniciar transacción
@@ -61,7 +60,6 @@
                 echo "Error: " . $e->getMessage();
             }
         }
-
         private function insertClient($userId, $userData) {
             $stmtClient = $this->conn->prepare("INSERT INTO clientes (id_user, id_rol, user_name, password_user, code_security, name, last_name, phone, rol_name, sex, register_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
             $stmtClient->bind_param(
@@ -83,7 +81,6 @@
                 throw new Exception("Error al insertar en la tabla `clientes`: " . $stmtClient->error);
             }
         }
-
         private function insertEmployee($userId, $userData) {
             $stmtEmployee = $this->conn->prepare("INSERT INTO empleados (id_user, id_rol, user_name, password_user, code_security, name, last_name, phone, rol_name, sex, register_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
             $stmtEmployee->bind_param(
@@ -107,12 +104,16 @@
         }
     }
 
-
     function newUser(){
         // Verificar si se ha enviado el formulario
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Crear un array que contenga todos los datos de $_POST
-            $formDataRegister = [];
+            $roldefault = 'cliente'; $username = $_POST['username']; $password = $_POST['password']; $name = $_POST['name']; $lastname = $_POST['lastname']; $phone = $_POST['phone']; $sex = $_POST['sex'];
+
+            date_default_timezone_set('America/Bogota');
+            $date = date('d/m/y h:i:s');
+
+            $formDataRegister = [$roldefault,$username, $password, codePassword(), $name, $lastname, $phone, $sex, $date];
 
             // Recorrer los datos enviados y almacenarlos en el array
             foreach ($_POST as $key => $value) {
@@ -131,24 +132,24 @@
     }
 
     // Ejemplo de uso
-    // include 'UserManager.php';
+    include 'UserManager.php';
     // $connect_db = 'connect.php';
     // $config_db = 'config.php';
 
-    // $userManager = new UserManager();
+    $userManager = new UserManager();
 
-    // $userData = [
-    //     'id_rol' => 2, // Cliente o empleado (2 o 3)
-    //     'user_name' => 'johndoe',
-    //     'password_user' => password_hash('password123', PASSWORD_DEFAULT),
-    //     'code_security' => '123456',
-    //     'name' => 'John',
-    //     'last_name' => 'Doe',
-    //     'phone' => '1234567890',
-    //     'rol_name' => 'cliente', // o 'empleado'
-    //     'sex' => 'male',
-    //     'register_date' => date('Y-m-d H:i:s')
-    // ];
+    $userData = [
+        'id_rol' => 2, // Cliente o empleado (2 o 3)
+        'user_name' => 'johndoe',
+        'password_user' => password_hash('password123', PASSWORD_DEFAULT),
+        'code_security' => '123456',
+        'name' => 'John',
+        'last_name' => 'Doe',
+        'phone' => '1234567890',
+        'rol_name' => 'cliente', // o 'empleado'
+        'sex' => 'male',
+        'register_date' => date('Y-m-d H:i:s')
+    ];
 
-    // $userManager->registerUser($userData);
+    $userManager->registerUser($userData);
 ?>
