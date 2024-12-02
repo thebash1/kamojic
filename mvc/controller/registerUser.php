@@ -3,7 +3,7 @@
     include '../../database/config.php';
     include '../../database/connectDB.php';
     
-    $conn = connectDB($host, $username, $password, $dbname, $port);
+    $conn = connectDB();
     // function isEmpty($value): bool{
     //     if(!empty($value)) return false;
     //     return true;

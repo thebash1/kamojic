@@ -20,4 +20,5 @@
         file_put_contents($file, $code . PHP_EOL, FILE_APPEND);
         return $code;
     }
+
 ?>

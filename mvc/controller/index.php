@@ -1,6 +1,6 @@
 <?php
-    include '../../database/config.php';
-    include '../../database/connectDB.php';
+    require '../../database/config.php';
+    require '../../database/connectDB.php';
 
     if(empty($_POST['username']) || empty($_POST['password']))
     {
@@ -10,7 +10,7 @@
 
     $username_1 = $_POST['username'];
     $password_1 = $_POST['password'];
-    $conn = connectDB($host, $username, $password, $dbname, $port);
+    $conn = connectDB();
 
     // echo $_POST['username'].'----- '.$_POST['password'].'/';
 
