@@ -19,7 +19,7 @@
                     <div class="col">
                         <nav class="navbar">
                             <ul class="nav nav-underline justify-content-center flex-grow-1">
-                                <li class="nav-item"><a class="nav-link text-body" href="./homeEmployee.php">Inicio</a></li>
+                                <li class="nav-item"><a class="nav-link text-body" href="./homeAdmin.php">Inicio</a></li>
                                 <li class="nav-item"><a class="nav-link text-body" href="./addReservation.php">Agregar cita</a></li>
                                 <li class="nav-item"><a class="nav-link text-body" href="./deleteReservation.php">Eliminar cita</a></li>
                                 <li class="nav-item"><a class="nav-link text-body" href="./updateReservation.php">Actualizar cita</a></li>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ofertas</title>
     <link rel="stylesheet" href="../../../home/footer.css">
-    <link rel="shortcut icon" href="../icons/price-tag.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../../icons/price-tag.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
@@ -17,7 +17,7 @@
                     <nav class="navbar" style="background: #FDD3D0;">
                         <div class="container my-2">
                             <div class="d-flex align-items-center">
-                                <img class="img-fluid me-3" src="../icons/start-black.png" alt="Logo" style="cursor: no-drop;">
+                                <img class="img-fluid me-3" src="../../../icons/start-black.png" alt="Logo" style="cursor: no-drop;">
                                 <a class="text-body fw-semibold fs-4" href="#" style="text-decoration: none; cursor: no-drop;">Kamojic</a>
                             </div>
                             <ul class="nav nav-underline justify-content-center flex-grow-1">
@@ -25,11 +25,11 @@
                                 <li class="nav-item"><a class="nav-link text-body" href="./offertsEmployee.php">Ofertas</a></li>
                                 <li class="nav-item"><a class="nav-link text-body" href="./reservationsEmployee.php">Citas</a></li>
                                 <li class="nav-item"><a class="nav-link text-body" href="./aboutusEmployee.php">Sobre nosotros</a></li>
-                                <li class="nav-item"><a class="nav-link text-body" href="../../../index.php">Cerrar sesión</a></li>
+                                <li class="nav-item"><a class="nav-link text-body" href="../../index.php">Cerrar sesión</a></li>
                             </ul>
                             <div class="d-flex align-items-center">
                                 <a href="#" data-bs-toggle="tooltip" data-bs-title="Información de usuario">
-                                    <img class="img-fluid mx-3" src="../icons/info.png" alt="info-user">
+                                    <img class="img-fluid mx-3" src="../../../icons/info.png" alt="info-user">
                                 </a>
                             </div>
                         </div>

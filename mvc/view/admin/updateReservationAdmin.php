@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscar</title>
+    <title>Actualizar</title>
     <link rel="stylesheet" href="../../../home/footer.css">
-    <link rel="shortcut icon" href="../../../icons/search.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../../icons/update-cloud.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 </head>
@@ -14,34 +14,32 @@
     <div class="container-father">
         <header>
             <div class="container-fluid">
-                <div class="row ">
-                    <h1 class="text-center mt-3">Buscar citas</h1>
-                    <div class="col">
-                        <nav class="navbar">
-                            <ul class="nav nav-underline justify-content-center flex-grow-1">
-                                <li class="nav-item"><a class="nav-link text-body" href="./homeEmployee.php">Inicio</a></li>
-                                <li class="nav-item"><a class="nav-link text-body" href="./addReservation.php">Agregar cita</a></li>
-                                <li class="nav-item"><a class="nav-link text-body" href="./deleteReservation.php">Eliminar cita</a></li>
-                                <li class="nav-item"><a class="nav-link text-body" href="./updateReservation.php">Actualizar cita</a></li>
-                                <li class="nav-item"><a class="nav-link text-body" id="logout" name="logout" href="../../controller/closeSesion.php">Cerrar sesión</a></li>
-                            </ul>
-                        </nav>
-                    </div>
+                <div class="row justify-content-center align-items-center text-center">
+                    <h1 class="text-center mt-3">Actualizar citas</h1>
+                    <nav class="navbar">
+                        <ul class="nav nav-underline justify-content-center flex-grow-1">
+                            <li class="nav-item"><a class="nav-link text-body" href="./homeAdmin.php">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link text-body" href="./addReservationAdmin.php">Agregar cita</a></li>
+                            <li class="nav-item"><a class="nav-link text-body" href="./deleteReservationAdmin.php">Eliminar cita</a></li>
+                            <li class="nav-item"><a class="nav-link text-body" href="./searchReservationAdmin.php">Buscar cita</a></li>
+                            <li class="nav-item"><a class="nav-link text-body" id="logout" name="logout" href="../../controller/closeSesion.php">Cerrar sesión</a></li>
+                        </ul>
+                    </nav>
                 </div>
-        
+                
                 <!-- #region container buscar cliente -->
                 <div class="row my-1 justify-content-center">
                     <div class="col d-xs-block col-sm-4 col-md-3 col-lg-2 col-xl-2">
-                        <input class="form-control" type="text" placeholder="Fecha" aria-label="Fecha" id="date_delete_reservation" name="date_delete_reservation" value="" disabled>
+                        <input class="form-control" type="text" placeholder="Fecha" aria-label="Fecha" id="date_update_reservation" name="date_update_reservation" value="" disabled>
                     </div>
-                    <div class="col d-xs-block col-sm-8 col-md-5 col-lg-3 col-xl-3">
+                    <div class="col d-xs-block col-sm-8 col-md-5 col-lg-3 col-xl-3"> 
                         <form class="d-flex" role="search" action="">
                             <input class="form-control me-2" type="search" placeholder="ID Cliente" aria-label="ID Cliente">
-                            <button class="btn btn-info" type="button" title="Con fecha actual">Buscar</button>
+                            <button class="btn btn-info" type="button" title="Con fecha actual">Modificar</button>
                         </form>
                     </div>
                 </div>
-                <!-- #endregion container buscar cliente -->        
+                <!-- #endregion container buscar cliente -->
             </div>
         </header>
 
@@ -120,7 +118,7 @@
         function insertCurrentDate(){
             const currentDate = new Date();
             const arrayDate = `${currentDate.getDate()}/${(currentDate.getMonth()+1)}/${currentDate.getFullYear()}`;
-            document.getElementById("date_delete_reservation").value = arrayDate;
+            document.getElementById("date_update_reservation").value = arrayDate;
         };
 
         window.onload = function () {
