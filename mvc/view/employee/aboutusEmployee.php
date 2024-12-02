@@ -25,6 +25,7 @@
                                 <li class="nav-item"><a class="nav-link text-body" href="./offertsEmployee.php">Ofertas</a></li>
                                 <li class="nav-item"><a class="nav-link text-body" href="./reservationsEmployee.php">Citas</a></li>
                                 <li class="nav-item"><a class="nav-link text-body" href="./aboutusEmployee.php">Sobre nosotros</a></li>
+                                <li class="nav-item"><a class="nav-link text-body" href="./addReservation.php">Panel de citas</a></li>
                                 <li class="nav-item"><a class="nav-link text-body" href="../../controller/closeSesion.php">Cerrar sesión</a></li>
                             </ul>
                             <div class="d-flex align-items-center">

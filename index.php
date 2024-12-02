@@ -36,14 +36,14 @@
                                 </div>
                             </div>
                         </form>
-                        <div class="row justify-content-center w-100 mx-auto">
+                        <div class="row justify-content-center w-100 mx-auto my-3">
                             <div class="d-grid gap-2 col-6 col-md-6 col-lg-7 col-xl-7">    
                                 <a type="button" href="./register.php" class="btn btn-outline-success">Registrarme</a>
                             </div>
                         </div>
                         <div class="col w-100">
-                            <div class="col col-6 col-md-6 col-lg-6 col-xl-6"></div>
-                                <a href="#" class="a-hover" style="background-color: none; border: none; color: #134eec; text-decoration: none;" data-bs-toggle="modal" data-bs-target="#modalFunctionUnused">¿Contraseña olvidada?</a>
+                            <div class="col col-6 col-md-6 col-lg-6 col-xl-6">
+                            <a href="#" class="a-hover" style="background-color: none; border: none; color: #134eec; text-decoration: none;" data-bs-toggle="modal" data-bs-target="#modalFunctionUnused">¿Contraseña olvidada?</a>
                                 <!-- #region modal opcion sin uso -->
                                 <!-- Modal -->
                                 <div class="modal fade" id="modalFunctionUnused" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalFunction" aria-hidden="true">
