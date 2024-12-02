@@ -1,7 +1,7 @@
 <?php
+
 // Verificar conexión
-function connectDB() {
-    require './config.php';
+function connectDB($host, $username, $password, $dbname, $port): mysqli|null {
     try {
         // Crear una nueva conexión con mysqli
         $conn = new mysqli($host, $username, $password, $dbname, $port);

@@ -10,7 +10,7 @@
 
     $username_1 = $_POST['username'];
     $password_1 = $_POST['password'];
-    $conn = connectDB();
+    $conn = connectDB($host, $username, $password, $dbname, $port);
 
     // echo $_POST['username'].'----- '.$_POST['password'].'/';
 

@@ -1,9 +1,10 @@
 <?php
-    include './codeSecurity.php';
-    include '../../database/config.php';
-    include '../../database/connectDB.php';
+    require './codeSecurity.php';
+    require '../../database/config.php';
+    require '../../database/connectDB.php';
     
-    $conn = connectDB();
+    $conn = connectDB($host, $username, $password, $dbname, $port);
+
     // function isEmpty($value): bool{
     //     if(!empty($value)) return false;
     //     return true;
@@ -18,9 +19,9 @@
             $name = $_POST['name']; $lastname = $_POST['lastname']; $username = $_POST['username']; $password = $_POST['password']; $phone = $_POST['phone']; $sex = $_POST['sex'];
 
             echo '<br>' . $name, $lastname, $username, $password, $phone, $sex;
-
         }
     }
+    
     if(isset($_POST["submit"])) echo '<br> validado segundo if' ;
 
 
