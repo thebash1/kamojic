@@ -18,7 +18,7 @@
                     <nav class="navbar">
                         <ul class="nav nav-underline justify-content-center align-items-center flex-grow-1">
                             <li class="nav-item"><a class="nav-link text-body" href="./controlUsers.php">Regresar</a></li>
-                            <li class="nav-item"><a class="nav-link text-body" id="logout" name="logout" href="../../../index.php">Cerrar sesión</a></li>
+                            <li class="nav-item"><a class="nav-link text-body" id="logout" name="logout" href="../../controller/closeSesion.php">Cerrar sesión</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -30,29 +30,29 @@
                 <!-- #region seccion agregar usuarios -->
                 <div class="row my-2 justify-content-center">
                     <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
-                        <input type="text" class="form-control" placeholder="Usuario" aria-label="usuario" id="userName" name="user_name" required>
+                        <input type="text" class="form-control" placeholder="Usuario" aria-label="usuario" id="username" name="user_name" required>
                     </div>
                     <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
-                        <input class="form-control" type="text" placeholder="Contraseña" aria-label="contraseña" id="userPassword" name="password_user" required>
-                    </div>
-                </div>
-    
-                <div class="row my-2 justify-content-center">
-                    <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
-                        <input type="text" class="form-control" placeholder="Nombres" aria-label="Nombres" id="userFirstName" name="user_firstname" required>
-                    </div>
-                    <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
-                        <input type="text" class="form-control" placeholder="Apellidos" aria-label="Apellidos" id="userLastName" name="user_lastname" required>
+                        <input class="form-control" type="text" placeholder="Contraseña" aria-label="contraseña" id="password" name="password_user" required>
                     </div>
                 </div>
     
                 <div class="row my-2 justify-content-center">
                     <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
-                        <input type="text" class="form-control" placeholder="Teléfono" aria-label="Teléfono" name="phone_user" id="phoneUser" required>
+                        <input type="text" class="form-control" placeholder="Nombres" aria-label="Nombres" id="name" name="user_firstname" required>
                     </div>
                     <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
-                        <label class="visually-hidden" for="autoSizingSelect">Preference</label>
-                        <select class="form-select" id="autoSizingSelect" required>
+                        <input type="text" class="form-control" placeholder="Apellidos" aria-label="Apellidos" id="lastname" name="user_lastname" required>
+                    </div>
+                </div>
+    
+                <div class="row my-2 justify-content-center">
+                    <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
+                        <input type="text" class="form-control" placeholder="Teléfono" aria-label="Teléfono" name="phone" id="phoneUser" required>
+                    </div>
+                    <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
+                        <label class="visually-hidden" for="sex">Preference</label>
+                        <select class="form-select" name="sex" id="sex" required>
                             <option id="masculino" name="masculino" value="1">Masculino</option>
                             <option id="femenino" name="femenino" value="2">Femenino</option>
                         </select>
@@ -61,14 +61,14 @@
     
                 <div class="row my-2 justify-content-center">
                     <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
-                        <input type="text" class="form-control" name="userDateRegister" id="userDateRegister" placeholder="Fecha de registro" aria-label="Fecha de registro" data-bs-toggle="tooltip" data-bs-title="Default tooltip" disabled>
+                        <input type="text" class="form-control" name="regdate" id="regdate" placeholder="Fecha de registro" aria-label="Fecha de registro" data-bs-toggle="tooltip" data-bs-title="Default tooltip" disabled>
                     </div>
                     <div class="col d-xs-block col-md-6 col-lg-4 col-xl-4">
                         <label class="visually-hidden" for="autoSizingSelect">Preference</label>
                         <select class="form-select" id="autoSizingSelect" required>
-                            <option id="default_gender" name="default_gender" selected>Rol</option>
-                            <option id="employee" name="employee" value="1">Empleado</option>
-                            <option id="client" name="client" value="2">Cliente</option>
+                            <option id="rol" name="rol" selected>Rol</option>
+                            <option id="empleado" name="empleado" value="1">Empleado</option>
+                            <option id="cliente" name="cliente" value="2">Cliente</option>
                         </select>
                     </div>
                 </div>
@@ -98,8 +98,8 @@
     <script>
         function insertCurrentDateAndTime(){
             const currentDate = new Date();
-            const arrayDate = `${currentDate.getDate()}/${(currentDate.getMonth()+1)}/${currentDate.getFullYear()}`;
-            document.getElementById("userDateRegister").value = arrayDate;
+            const arrayDate = `${currentDate.getDate()}/${(currentDate.getMonth()+1)}/${currentDate.getFullYear()} `;
+            document.getElementById("regdate").value = arrayDate;
         };
 
         window.onload = function () {

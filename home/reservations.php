@@ -25,7 +25,7 @@
                                 <li class="nav-item"><a class="nav-link text-body" href="./offerts.php">Ofertas</a></li>
                                 <li class="nav-item"><a class="nav-link text-body" href="./reservations.php">Citas</a></li>
                                 <li class="nav-item"><a class="nav-link text-body" href="./about_us.php">Sobre nosotros</a></li>
-                                <li class="nav-item"><a class="nav-link text-body" href="../index.php">Cerrar sesión</a></li>
+                                <li class="nav-item"><a class="nav-link text-body" href="../mvc/controller/closeSesion.php">Cerrar sesión</a></li>
                             </ul>
                             <div class="d-flex align-items-center">
                                 <a href="#" data-bs-toggle="tooltip" data-bs-title="Información de usuario">

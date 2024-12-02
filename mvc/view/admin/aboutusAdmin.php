@@ -6,7 +6,7 @@
     <title>Sobre nosotros</title>
     <link rel="stylesheet" href="../../../home/footer.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="shortcut icon" href="../icons/about.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../../icons/about.png" type="image/x-icon">
 </head>
 <body>
 
@@ -17,7 +17,7 @@
                     <nav class="navbar" style="background: #FDD3D0;">
                         <div class="container my-2">
                             <div class="d-flex align-items-center">
-                                <img class="img-fluid me-3" src="../icons/start-black.png" alt="Logo" style="cursor: no-drop;">
+                                <img class="img-fluid me-3" src="../../../icons/start-black.png" alt="Logo" style="cursor: no-drop;">
                                 <a class="text-body fw-semibold fs-4" href="#" style="text-decoration: none; cursor: no-drop;">Kamojic</a>
                             </div>
                             <ul class="nav nav-underline justify-content-center flex-grow-1">
@@ -31,7 +31,7 @@
                             </ul>
                             <div class="d-flex align-items-center">
                                 <a href="#" data-bs-toggle="tooltip" data-bs-title="Información de usuario">
-                                    <img class="img-fluid mx-3" src="../icons/info.png" alt="info-user">
+                                    <img class="img-fluid mx-3" src="../../../icons/info.png" alt="info-user">
                                 </a>
                             </div>
                         </div>
@@ -48,7 +48,7 @@
                         <p class="lh-lg">En el salón de belleza Kamojic nos apasiona ofrecer una experiencia de belleza única y personalizada. Ubicados en Aguachica, Cesar, combinamos innovación tecnológica con un enfoque centrado en el cliente. Gracias a nuestro sistema avanzado de gestión de citas en línea, nuestros clientes pueden reservar fácilmente sus servicios, eliminando las largas esperas y asegurando la disponibilidad de horarios. Ofrecemos una amplia gama de servicios, desde cepillados hasta tratamientos capilares especializados y manicura. Nuestro objetivo es destacar como un referente en el sector, brindando calidad, comodidad y modernidad en cada visita.</p> <br>
                     </div>
                     <div class="col-md-6">
-                        <img class="img-fluid border rounded shadow" src="../img/beauty-salon-3277314_1920.jpg" alt="about-us-img">
+                        <img class="img-fluid border rounded shadow" src="../../../img/beauty-salon-3277314_1920.jpg" alt="about-us-img">
                     </div>  
                 </div>
             </div>

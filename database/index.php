@@ -18,7 +18,7 @@
                 <div class="row justify-content-center align-items-center mt-3">
                     <div class="col">
                         <p class="text-start">Esta página es para conectarse con el server de infinitefree</p>
-                        <p class="text-start">Estado: <?php include './connect_db.php'?></p>
+                        <p class="text-start">Estado: <?php include './config.php' ; include './connectDB.php';?></p>
                     </div>
                 </div>
             </div>
@@ -33,5 +33,4 @@
 
 </body>
 </html>
-
 <!-- #endregion estructura html -->

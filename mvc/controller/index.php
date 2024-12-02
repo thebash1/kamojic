@@ -29,39 +29,27 @@ if($result && mysqli_num_rows($result)> 0){
         session_start();
         $_SESSION['username'] = $row['name'];
         $_SESSION['rol'] = $row['id_rol'];
+        
         if($row['id_rol']== '1'){
-            echo "<script>
-                window.location ='../view/admin/homeAdmin.php';
-                </script>";
+            echo "<script>window.location ='../view/admin/homeAdmin.php';</script>";
             exit;
         }
         if($row['id_rol']== '2'){
-            echo "<script>
-            window.location ='../view/employee/homeEmployee.php';
-            </script>";
+            echo "<script>window.location ='../view/employee/homeEmployee.php';</script>";
             exit;
         } 
         if($row['id_rol']== '3'){
-            echo "<script>
-            window.location ='../../home/home.php';
-            </script>";
-
+            echo "<script>window.location ='../../home/home.php';</script>";
             exit;
         } 
     }
     else{
-        echo "<script>
-        window.location ='../../index.php?error=1';
-        </script>";
-
+        echo "<script>window.location ='../../index.php?error=1';</script>";
         mysqli_close($conn);
     } 
 }
 else {
-    echo "<script>
-            window.location ='../../index.php?error=1';
-            </script>";
-
+    echo "<script>window.location ='../../index.php?error=1';</script>";
     mysqli_close($conn);
 }
     
